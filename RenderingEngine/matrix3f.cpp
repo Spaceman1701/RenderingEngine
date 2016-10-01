@@ -35,9 +35,14 @@ namespace engine {
 			mat[8] = m22;
 		}
 
-		Matrix3f::Matrix3f(float mat[]) {
+		Matrix3f::Matrix3f(float mat[9]) {
 			memcpy(this->mat, mat, sizeof(mat));
 		}
+
+		void Matrix3f::setToMatrix(float matrix[9]) {
+			memcpy(this->mat, matrix, sizeof(matrix));
+		}
+
 
 		float Matrix3f::determinant() {
 			return determinant3(mat);
@@ -77,6 +82,19 @@ namespace engine {
 			inv[8] = determinant2(getValue(0, 0), getValue(1, 0), getValue(0, 1), getValue(1, 1)) * invdet;
 		}
 
+		Matrix3f Matrix3f::transpose() { //This can be optimised to not use a loop
+			Matrix3f trans;
+			for (int x = 0; x < 3; x++) {
+				for (int y = 0; y < 3; y++) {
+					trans.setValue(x, y, getValue(y, x));
+				}
+			}
+			return trans; //Hopefully RVO will take care of this
+		}
+
+		void Matrix3f::rawMatrix(float raw[9]) {
+			memcpy(raw, mat, sizeof(mat));
+		}
 		
 	}
 }

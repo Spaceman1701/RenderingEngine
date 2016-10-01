@@ -12,9 +12,10 @@ namespace engine {
 			Matrix3f(Vector3f c1, Vector3f c2, Vector3f c3);
 			//m21 = column 2 row 1 [0,3)
 			Matrix3f(float m00, float m01, float m02, float m10, float m11, float m12, float m20, float m21, float m22);
-			Matrix3f(float mat[]);
+			Matrix3f(float mat[9]);
 
 			Matrix3f transpose();
+
 			bool inverse(Matrix3f* inverse);
 
 			float inline getValue(const int row, const int col) {
