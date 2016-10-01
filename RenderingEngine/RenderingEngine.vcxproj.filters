@@ -13,5 +13,54 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\test">
+      <UniqueIdentifier>{1f76f2b4-4268-4b09-8a9f-d46a66df430a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\test">
+      <UniqueIdentifier>{b84e5c5e-064f-4b17-a889-53dfdf690017}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine">
+      <UniqueIdentifier>{e7a43470-4ff3-4828-bcdc-afa91e64dded}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine\math">
+      <UniqueIdentifier>{223264af-bb31-4b3a-bff3-5bd1e030ca8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\engine">
+      <UniqueIdentifier>{d7d98298-dfe2-4e32-8ec5-3ca07e7e87c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\engine\math">
+      <UniqueIdentifier>{c16db102-5d29-4ca4-8e45-2f5b42a7f71e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\test\math">
+      <UniqueIdentifier>{aa17e7ba-a22f-47ab-971a-deb3223b0e07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\test\math">
+      <UniqueIdentifier>{228feb1f-93ac-4ada-af18-c428ce6e0482}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vector3f.cpp">
+      <Filter>Source Files\engine\math</Filter>
+    </ClCompile>
+    <ClCompile Include="test.cpp">
+      <Filter>Source Files\test</Filter>
+    </ClCompile>
+    <ClCompile Include="math_test.cpp">
+      <Filter>Source Files\test\math</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="vector3f.h">
+      <Filter>Header Files\engine\math</Filter>
+    </ClInclude>
+    <ClInclude Include="test.h">
+      <Filter>Header Files\test</Filter>
+    </ClInclude>
+    <ClInclude Include="math_test.h">
+      <Filter>Header Files\test\math</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
