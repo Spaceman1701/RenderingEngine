@@ -51,6 +51,9 @@
     <ClCompile Include="math_test.cpp">
       <Filter>Source Files\test\math</Filter>
     </ClCompile>
+    <ClCompile Include="matrix3f.cpp">
+      <Filter>Source Files\engine\math</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="vector3f.h">
@@ -61,6 +64,18 @@
     </ClInclude>
     <ClInclude Include="math_test.h">
       <Filter>Header Files\test\math</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix3f.h">
+      <Filter>Header Files\engine\math</Filter>
+    </ClInclude>
+    <ClInclude Include="vector4f.h">
+      <Filter>Header Files\engine\math</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix4f.h">
+      <Filter>Header Files\engine\math</Filter>
+    </ClInclude>
+    <ClInclude Include="util.h">
+      <Filter>Header Files\engine\math</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

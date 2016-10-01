@@ -21,13 +21,18 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="math_test.cpp" />
+    <ClCompile Include="matrix3f.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="vector3f.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="math_test.h" />
+    <ClInclude Include="matrix3f.h" />
+    <ClInclude Include="matrix4f.h" />
     <ClInclude Include="test.h" />
+    <ClInclude Include="util.h" />
     <ClInclude Include="vector3f.h" />
+    <ClInclude Include="vector4f.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{BCB1CE19-F62C-47E0-B144-B963F04F739D}</ProjectGuid>

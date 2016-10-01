@@ -10,7 +10,6 @@
 
 int main() {
 #ifdef TEST
-
 	std::cout << "started in test mode!" << std::endl;
 	test::runAllTests();
 	std::cin.ignore();
