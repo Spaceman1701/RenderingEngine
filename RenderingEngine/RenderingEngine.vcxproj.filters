@@ -77,5 +77,8 @@
     <ClInclude Include="util.h">
       <Filter>Header Files\engine\math</Filter>
     </ClInclude>
+    <ClInclude Include="matrix_,math.h">
+      <Filter>Header Files\engine\math</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

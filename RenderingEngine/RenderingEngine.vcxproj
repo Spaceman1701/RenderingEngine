@@ -29,6 +29,7 @@
     <ClInclude Include="math_test.h" />
     <ClInclude Include="matrix3f.h" />
     <ClInclude Include="matrix4f.h" />
+    <ClInclude Include="matrix_,math.h" />
     <ClInclude Include="test.h" />
     <ClInclude Include="util.h" />
     <ClInclude Include="vector3f.h" />

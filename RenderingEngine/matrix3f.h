@@ -1,5 +1,6 @@
 #pragma once
 #include "vector3f.h"
+#include <string.h>
 namespace engine {
 	namespace math {
 		class Matrix3f { //Column major... feelsuhgman
@@ -14,15 +15,36 @@ namespace engine {
 			Matrix3f(float mat[]);
 
 			Matrix3f transpose();
-			Matrix3f inverse();
+			bool inverse(Matrix3f* inverse);
 
-			float getValue(const int row, const int col);
-			float getValue(int i);
+			float inline getValue(const int row, const int col) {
+				return mat[3 * col + row];
+			}
+
+			void inline setValue(const int row, const int col, const float val) {
+				mat[3 * col + row] = val;
+			}
+
+			void setToIdentity();
+
+			float inline getValue(int i) {
+				return mat[i];
+			}
 			float determinant();
 
 			void setToMatrix(float matrix[9]);
 
-			void rawMatrix(float matrix[9]);
+			void rawMatrix(float raw[9]);
+
+			bool inline operator==(Matrix3f& right) {
+				return (memcmp(mat, right.mat, sizeof(mat)) == 0); //memcmp returns 0 if two blocks are equal
+			}
+
+			bool inline operator!=(Matrix3f& right) {
+				return (memcmp(mat, right.mat, sizeof(mat)) != 0);
+			}
 		};
+
+		
 	}
 }
