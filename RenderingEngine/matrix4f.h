@@ -16,6 +16,7 @@ namespace engine {
 
 			float getValue(const int row, const int col);
 			float getValue(int i);
+			void setValue(const int row, const int col, const float value);
 			void rawMatrix(float matrix[9]);
 		};
 	}
