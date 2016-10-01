@@ -24,6 +24,7 @@
     <ClCompile Include="matrix3f.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="vector3f.cpp" />
+    <ClCompile Include="vector4f.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="math_test.h" />
