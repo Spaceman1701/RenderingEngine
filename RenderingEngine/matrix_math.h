@@ -13,6 +13,7 @@ namespace engine {
 			return v1 - v2 + v3;
 		}
 
-		void minorMatrix(const float mat[], float minor[], int size);
+		void cofactorMatrix(const float mat[], float cofactor[], int row, int col, int size);
+		float mulRowCol(float left[], float right[], int row, int col, int size);
 	}
 }

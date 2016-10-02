@@ -60,6 +60,9 @@
     <ClCompile Include="matrix4f.cpp">
       <Filter>Source Files\engine\math</Filter>
     </ClCompile>
+    <ClCompile Include="matrix_math.cpp">
+      <Filter>Source Files\engine\math</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="vector3f.h">
@@ -83,7 +86,7 @@
     <ClInclude Include="util.h">
       <Filter>Header Files\engine\math</Filter>
     </ClInclude>
-    <ClInclude Include="matrix_,math.h">
+    <ClInclude Include="matrix_math.h">
       <Filter>Header Files\engine\math</Filter>
     </ClInclude>
   </ItemGroup>

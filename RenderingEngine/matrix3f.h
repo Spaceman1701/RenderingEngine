@@ -47,6 +47,8 @@ namespace engine {
 			bool inline operator!=(Matrix3f& right) {
 				return (memcmp(mat, right.mat, sizeof(mat)) != 0);
 			}
+
+
 		};
 
 		

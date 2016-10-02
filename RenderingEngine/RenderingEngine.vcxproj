@@ -23,6 +23,7 @@
     <ClCompile Include="math_test.cpp" />
     <ClCompile Include="matrix3f.cpp" />
     <ClCompile Include="matrix4f.cpp" />
+    <ClCompile Include="matrix_math.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="vector3f.cpp" />
     <ClCompile Include="vector4f.cpp" />
@@ -31,7 +32,7 @@
     <ClInclude Include="math_test.h" />
     <ClInclude Include="matrix3f.h" />
     <ClInclude Include="matrix4f.h" />
-    <ClInclude Include="matrix_,math.h" />
+    <ClInclude Include="matrix_math.h" />
     <ClInclude Include="test.h" />
     <ClInclude Include="util.h" />
     <ClInclude Include="vector3f.h" />

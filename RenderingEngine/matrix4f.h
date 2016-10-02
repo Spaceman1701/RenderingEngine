@@ -6,6 +6,7 @@ namespace engine {
 		class Matrix4f {
 		private:
 			float mat[16];
+			float mulRowVec(const Vector4f& vec, int row);
 		public:
 			Matrix4f();
 			Matrix4f(Matrix4f* m);
@@ -16,8 +17,6 @@ namespace engine {
 			Matrix4f(float m[16]);
 
 			Matrix4f transpose();
-			Matrix4f inverse();
-
 			void transposeSelf();
 
 			bool inverse(Matrix4f* inverse);
@@ -28,8 +27,19 @@ namespace engine {
 			float getValue(const int row, const int col);
 			float getValue(int i);
 			void setValue(const int row, const int col, const float value);
-			void rawMatrix(float matrix[9]);
+			void rawMatrix(float matrix[16]);
+			void setToMatrix(float matrix[16]);
 			
+			bool inline operator==(Matrix4f& right) {
+				return (memcmp(mat, right.mat, sizeof(mat)) == 0); //memcmp returns 0 if two blocks are equal
+			}
+
+			bool inline operator!=(Matrix4f& right) {
+				return (memcmp(mat, right.mat, sizeof(mat)) != 0);
+			}
+
+			Matrix4f operator*(Matrix4f& right);
+			Vector4f operator*(Vector4f& right);
 		};
 	}
 }

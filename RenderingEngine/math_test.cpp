@@ -1,6 +1,7 @@
 #include "math_test.h"
 #include "vector3f.h"
 #include "matrix3f.h"
+#include "matrix4f.h"
 #include <iostream>;
 namespace test {
 	namespace math {
@@ -14,7 +15,50 @@ namespace test {
 				ret = false;
 				(*numFailed)++;
 			}
+			if (!matrix4Test()) {
+				ret = false;
+				(*numFailed)++;
+			}
 			return ret;
+		}
+
+		bool matrix4Test() {
+			using namespace engine::math;
+			Matrix4f mat;
+			Matrix4f mat2;
+			if (mat != mat2) {
+				std::cout << "mat4 inequality problems!" << std::endl;
+				return false;
+			}
+			mat2.setValue(2, 0, 10.0f);
+			if (mat == mat2) {
+				std::cout << "mat4 equality problems!" << std::endl;
+				return false;
+			}
+			Matrix4f invMat;
+			mat.inverse(&invMat);
+			if (mat != invMat) {
+				std::cout << "mat4 inverse problems" << std::endl;
+				return false;
+			}
+			mat2.inverse(&invMat);
+			if (invMat == mat2) {
+				std::cout << "mat4 inverse dif problems" << std::endl;
+				return false;
+			}
+			mat.setIdentity();
+			Matrix4f mat3;
+			if (mat2 * mat != mat2) {
+				std::cout << "mat4 mul problems!" << std::endl;
+				return false;
+			}
+			Vector4f a(1.1f, 6.8f, 2.3f, -9.0f);
+			if (mat * a != a) {
+				std::cout << "mat4 vec4 mul failed" << std::endl;
+				return false;
+			}
+
+			return true;
 		}
 
 		bool matrix3Test() {
