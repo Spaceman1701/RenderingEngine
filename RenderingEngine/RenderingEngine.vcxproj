@@ -22,6 +22,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="math_test.cpp" />
     <ClCompile Include="matrix3f.cpp" />
+    <ClCompile Include="matrix4f.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="vector3f.cpp" />
     <ClCompile Include="vector4f.cpp" />

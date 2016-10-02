@@ -8,7 +8,7 @@
 namespace test {
 	void runAllTests() {
 		if (MATH) {
-			int numFailed;
+			int numFailed = 0;
 			if (math::runTests(&numFailed)) {
 				std::cout << "MATH: success - all tests passed" << std::endl;
 			} else {

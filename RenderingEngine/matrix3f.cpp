@@ -60,6 +60,37 @@ namespace engine {
 			mat[8] = 1;
 		}
 
+		void Matrix3f::transposeSelf() {
+			for (int x = 0; x < 3; x++) {
+				for (int y = 0; y < 3; y++) {
+					setValue(x, y, getValue(y, x));
+				}
+			}
+		}
+
+		bool Matrix3f::invertSelf() {
+			float det = determinant3(mat);
+			if (det == 0) {
+				return false;
+			}
+			float invdet = 1.0f / det;
+
+			float inv[9];
+			inv[0] = determinant2(getValue(1, 1), getValue(2, 1), getValue(1, 2), getValue(2, 2)) * invdet;
+			inv[1] = determinant2(getValue(1, 2), getValue(2, 2), getValue(1, 0), getValue(2, 0)) * invdet;
+			inv[2] = determinant2(getValue(1, 0), getValue(2, 0), getValue(1, 1), getValue(2, 1)) * invdet;
+
+			inv[3] = determinant2(getValue(0, 2), getValue(2, 2), getValue(0, 1), getValue(2, 1)) * invdet;
+			inv[4] = determinant2(getValue(0, 0), getValue(2, 0), getValue(0, 2), getValue(2, 2)) * invdet;
+			inv[5] = determinant2(getValue(0, 1), getValue(2, 1), getValue(0, 0), getValue(2, 0)) * invdet;
+
+			inv[6] = determinant2(getValue(0, 1), getValue(1, 1), getValue(0, 2), getValue(1, 2)) * invdet;
+			inv[7] = determinant2(getValue(0, 2), getValue(1, 2), getValue(0, 0), getValue(1, 0)) * invdet;
+			inv[8] = determinant2(getValue(0, 0), getValue(1, 0), getValue(0, 1), getValue(1, 1)) * invdet;
+			memcpy(mat, inv, sizeof(mat));
+			return true;
+		}
+
 		bool Matrix3f::inverse(Matrix3f* inverse) {
 			//compute the minors
 			float det = determinant3(mat);
@@ -82,14 +113,14 @@ namespace engine {
 			inv[8] = determinant2(getValue(0, 0), getValue(1, 0), getValue(0, 1), getValue(1, 1)) * invdet;
 		}
 
-		Matrix3f Matrix3f::transpose() { //This can be optimised to not use a loop
+		Matrix3f Matrix3f::transpose() {
 			Matrix3f trans;
 			for (int x = 0; x < 3; x++) {
 				for (int y = 0; y < 3; y++) {
 					trans.setValue(x, y, getValue(y, x));
 				}
 			}
-			return trans; //Hopefully RVO will take care of this
+			return trans;
 		}
 
 		void Matrix3f::rawMatrix(float raw[9]) {

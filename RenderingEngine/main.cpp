@@ -18,7 +18,6 @@ int main() {
 	std::cout << "starting" << std::endl;
 	if (!glfwInit()) {
 		std::cout << "failed glfw init" << std::endl;
-		
 	}
 	
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);

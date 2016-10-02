@@ -57,6 +57,9 @@
     <ClCompile Include="vector4f.cpp">
       <Filter>Source Files\engine\math</Filter>
     </ClCompile>
+    <ClCompile Include="matrix4f.cpp">
+      <Filter>Source Files\engine\math</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="vector3f.h">

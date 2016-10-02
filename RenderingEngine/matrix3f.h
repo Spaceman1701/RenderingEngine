@@ -15,10 +15,13 @@ namespace engine {
 			Matrix3f(float mat[9]);
 
 			Matrix3f transpose();
+			void transposeSelf();
 
 			bool inverse(Matrix3f* inverse);
+			bool invertSelf();
 
-			float inline getValue(const int row, const int col) {
+
+			float inline getValue(const int row, const int col) const {
 				return mat[3 * col + row];
 			}
 
@@ -28,7 +31,7 @@ namespace engine {
 
 			void setToIdentity();
 
-			float inline getValue(int i) {
+			float inline getValue(int i) const{
 				return mat[i];
 			}
 			float determinant();
