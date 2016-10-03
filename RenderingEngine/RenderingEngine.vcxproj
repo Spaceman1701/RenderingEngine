@@ -35,8 +35,9 @@
     <ClInclude Include="matrix4f.h" />
     <ClInclude Include="matrix_math.h" />
     <ClInclude Include="quaternion.h" />
+    <ClInclude Include="stdinc.h" />
     <ClInclude Include="test.h" />
-    <ClInclude Include="util.h" />
+    <ClInclude Include="math_util.h" />
     <ClInclude Include="vector3f.h" />
     <ClInclude Include="vector4f.h" />
   </ItemGroup>

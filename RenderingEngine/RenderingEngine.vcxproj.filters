@@ -86,14 +86,17 @@
     <ClInclude Include="matrix4f.h">
       <Filter>Header Files\engine\math</Filter>
     </ClInclude>
-    <ClInclude Include="util.h">
-      <Filter>Header Files\engine\math</Filter>
-    </ClInclude>
     <ClInclude Include="matrix_math.h">
       <Filter>Header Files\engine\math</Filter>
     </ClInclude>
     <ClInclude Include="quaternion.h">
       <Filter>Header Files\engine\math</Filter>
+    </ClInclude>
+    <ClInclude Include="math_util.h">
+      <Filter>Header Files\engine\math</Filter>
+    </ClInclude>
+    <ClInclude Include="stdinc.h">
+      <Filter>Header Files\engine</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
