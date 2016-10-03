@@ -51,9 +51,9 @@ namespace engine {
 		void Quaternion::fromAxisAngle(const Vector3f& axis, float rads) {
 			Vector3f norm_axis = axis.norm();
 			w = cos(rads / 2);
-			x = sin(rads / 2) * cos(axis.x);
-			y = sin(rads / 2) * cos(axis.y);
-			z = sin(rads / 2) * cos(axis.z);
+			x = sin(rads / 2) * axis.x;
+			y = sin(rads / 2) * axis.y;
+			z = sin(rads / 2) * axis.z;
 		}
 
 		void Quaternion::fromAxisAngle(float x, float y, float z, float rads) {
@@ -121,7 +121,7 @@ namespace engine {
 
 		Quaternion Quaternion::rotate(const Vector3f& axis, float rads) {
 			Quaternion temp(axis, rads);
-			temp = (*this) * temp;
+			temp = temp * (*this);
 			return temp;
 		}
 
@@ -155,11 +155,33 @@ namespace engine {
 		}
 
 		float Quaternion::length() {
-			return sqrt(length2());
+			float l2 = length2();
+			if (l2 == 1.0f) { //Should use epsilon value
+				return 1;
+			}
+			return sqrt(l2);
 		}
 
 		Matrix3f Quaternion::toMatrix() {
+			normalizeSelf();
+			float mat[9];
+			float x2 = x * x;
+			float y2 = y * y;
+			float z2 = z * z;
 
+			mat[0] = 1 - (2 * y2) - (2 * z2);
+			mat[1] = (2 * x * y) + (2 * w * y);
+			mat[2] = (2 * x * z) - (2 * w * y);
+
+			mat[3] = (2 * x * y) - (2 * w * z);
+			mat[4] = 1 - (2 * x2) - (2 * z2);
+			mat[5] = (2 * y * z) - (2 * w * x);
+
+			mat[6] = (2 * x * z) + (2 * w * y);
+			mat[7] = (2 * y * z) + (2 * w * x);
+			mat[8] = 1 - (2 * x2) - (2 * y2);
+
+			return Matrix3f(mat);
 		}
 
 		Quaternion Quaternion::operator*(const Quaternion& right) {
