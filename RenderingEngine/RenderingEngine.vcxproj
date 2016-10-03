@@ -24,6 +24,7 @@
     <ClCompile Include="matrix3f.cpp" />
     <ClCompile Include="matrix4f.cpp" />
     <ClCompile Include="matrix_math.cpp" />
+    <ClCompile Include="quaternion.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="vector3f.cpp" />
     <ClCompile Include="vector4f.cpp" />
@@ -33,6 +34,7 @@
     <ClInclude Include="matrix3f.h" />
     <ClInclude Include="matrix4f.h" />
     <ClInclude Include="matrix_math.h" />
+    <ClInclude Include="quaternion.h" />
     <ClInclude Include="test.h" />
     <ClInclude Include="util.h" />
     <ClInclude Include="vector3f.h" />

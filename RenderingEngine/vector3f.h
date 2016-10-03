@@ -11,9 +11,9 @@ namespace engine {
 			Vector3f(Vector3f* v);
 			Vector3f(float x, float y, float z);
 
-			Vector3f norm(); //should copy vector
-			float mag2();
-			float mag();
+			Vector3f norm() const; //should copy vector
+			float mag2() const;
+			float mag() const;
 			
 		};
 		bool inline operator==(const Vector3f& left, const Vector3f& right) {
@@ -38,6 +38,10 @@ namespace engine {
 
 		Vector3f inline operator-(const Vector3f& v) {
 			return Vector3f(-v.x, -v.y, -v.z);
+		}
+
+		Vector3f inline operator*(const float f, const Vector3f r) {
+			return Vector3f(r.x * f, r.y * f, r.z * f);
 		}
 
 		Vector3f cross(const Vector3f left, const Vector3f right);

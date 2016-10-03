@@ -50,5 +50,6 @@ namespace engine {
 		float inline operator*(const Vector4f& l, const Vector4f& r) {
 			return l.x*r.x + l.y*r.y + l.z*r.z + l.w*r.w;
 		}
+	
 	}
 }

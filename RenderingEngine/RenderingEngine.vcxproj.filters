@@ -63,6 +63,9 @@
     <ClCompile Include="matrix_math.cpp">
       <Filter>Source Files\engine\math</Filter>
     </ClCompile>
+    <ClCompile Include="quaternion.cpp">
+      <Filter>Source Files\engine\math</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="vector3f.h">
@@ -87,6 +90,9 @@
       <Filter>Header Files\engine\math</Filter>
     </ClInclude>
     <ClInclude Include="matrix_math.h">
+      <Filter>Header Files\engine\math</Filter>
+    </ClInclude>
+    <ClInclude Include="quaternion.h">
       <Filter>Header Files\engine\math</Filter>
     </ClInclude>
   </ItemGroup>
