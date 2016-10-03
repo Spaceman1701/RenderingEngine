@@ -66,6 +66,9 @@ namespace engine {
 
 			Matrix4f operator*(Matrix4f& right);
 			Vector4f operator*(Vector4f& right);
+
+			float operator[](int i) const;
+			float& operator[](int i);
 		};
 	}
 }

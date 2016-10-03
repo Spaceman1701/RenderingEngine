@@ -35,10 +35,6 @@ namespace engine {
 			fromAxisAngle(axis, rads);
 		}
 
-		Quaternion::Quaternion(float x, float y, float z, float rads) {
-			fromAxisAngle(x, y, z, rads);
-		}
-
 		void Quaternion::fromEulerAngles(const Vector3f& eulerAngles) {
 			float rads = eulerAngles.mag();
 			fromAxisAngle(eulerAngles, rads);
@@ -68,15 +64,12 @@ namespace engine {
 		}
 
 		void Quaternion::invertSelf() {
-			float x1 = x;
-			float y1 = y;
-			float z1 = z;
-			float w1 = w1;
+			float mag2 = length2();
 			conjugateSelf();
-			x /= x1;
-			y /= y1;
-			z /= z1;
-			w /= w1;
+			x /= mag2;
+			y /= mag2;
+			z /= mag2;
+			w /= mag2;
 		}
 
 		void Quaternion::conjugateSelf() {
@@ -130,7 +123,7 @@ namespace engine {
 		}
 
 		void Quaternion::rotateSelf(const Vector3f& eulerAngles) {
-			rotateSelf(eulerAngles, eulerAngles.mag);
+			rotateSelf(eulerAngles, eulerAngles.mag());
 		}
 
 		void Quaternion::rotateSelf(float x, float y, float z) {

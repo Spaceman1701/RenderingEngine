@@ -16,7 +16,6 @@ namespace engine {
 			Quaternion(const Vector3f& eulerAngles);
 			Quaternion(float x, float y, float z);
 			Quaternion(const Vector3f& axis, float rads);
-			Quaternion(float x, float y, float z, float rads);
 
 			void fromEulerAngles(const Vector3f& eulerAngles);
 			void fromEulerAngles(float x, float y, float z);

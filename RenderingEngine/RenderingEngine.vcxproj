@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="math_test.cpp" />
+    <ClCompile Include="math_util.cpp" />
     <ClCompile Include="matrix3f.cpp" />
     <ClCompile Include="matrix4f.cpp" />
     <ClCompile Include="matrix_math.cpp" />

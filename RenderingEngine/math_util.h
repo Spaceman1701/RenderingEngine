@@ -14,5 +14,6 @@ namespace engine {
 		Vector3f lerp(const Vector3f& a, const Vector3f& b, float t);
 		Vector4f lerp(const Vector4f& a, const Vector4f& b, float y);
 		Quaternion lerp(const Quaternion& a, const Quaternion& b, float t);
+		bool isZero(float value, float epsilon);
 	}
 }

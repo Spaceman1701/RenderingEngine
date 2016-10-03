@@ -313,5 +313,12 @@ namespace engine {
 			}
 			setToMatrix(output);
 		}
+
+		float Matrix4f::operator[](int i) const{
+			return mat[i];
+		}
+		float& Matrix4f::operator[](int i) {
+			return mat[i];
+		}
 	}
 }

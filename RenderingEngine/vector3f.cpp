@@ -16,15 +16,15 @@ Vector3f::Vector3f(Vector3f* v) {
 	this->z = v->z;
 }
 
-Vector3f Vector3f::norm() {
+Vector3f Vector3f::norm() const{
 	float mag = this->mag();
 	return Vector3f(x / mag, y / mag, z / mag);
 }
-float Vector3f::mag2() {
+float Vector3f::mag2() const{
 	return x*x + y*y + z*z;
 }
-float Vector3f::mag() {
-	return sqrt(this->mag2());
+float Vector3f::mag() const{
+	return sqrt(mag2());
 }
 namespace engine {
 	namespace math {
