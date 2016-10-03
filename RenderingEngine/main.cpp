@@ -3,7 +3,7 @@
 #include <iostream>
 #include <inttypes.h>
 //define TEST to run tests... not the best system, but it should be okay
-#define TEST 0
+//#define TEST 0
 #ifdef TEST
 #include "test.h"
 #endif //TEST

@@ -1,6 +1,6 @@
 #include "matrix4f.h"
 #include "matrix_math.h"
-#include <iostream>
+#include <math.h>
 
 namespace engine {
 	namespace math {
@@ -223,10 +223,32 @@ namespace engine {
 		}
 
 		void Matrix4f::setToRotation(float x, float y, float z, float rads) {
-			setIdentity();
+			setToRotation(Vector3f(x, y, z), rads);
+
 		}
 		void Matrix4f::setToRotation(Vector3f axis, float rads) {
-			setToRotation(axis.x, axis.y, axis.z, rads);
+			setIdentity();
+			Vector3f norm_axis = axis.norm();
+			float c = cos(rads);
+			float s = sin(rads);
+			float t = 1.0f - c;
+			float x = norm_axis.x;
+			float y = norm_axis.y;
+			float z = norm_axis.z;
+			float x2 = x * x;
+			float y2 = y * y;
+			float z2 = z * z;
+			mat[0] = c * x2 * t;
+			mat[1] = (y * z * t) + (y * s);
+			mat[2] = (z * x * t) - (y * s);
+
+			mat[4] = (x * y * t) - (z * s);
+			mat[5] = c + (y2 * t);
+			mat[6] = (z * y * t) + (x * c);
+
+			mat[8] = (x * z * t) + (y * s);
+			mat[9] = (y * z * t) - (x * s);
+			mat[10] = c * (z2 * t);
 		}
 
 		void Matrix4f::translate(const Vector3f& trans) {
@@ -244,13 +266,13 @@ namespace engine {
 		}
 
 		void Matrix4f::rotate(float x, float y, float z, float rads) {
-			Matrix4f temp;
-			temp.setToRotation(x, y, z, rads);
-			multiplySelf(temp);
+			rotate(Vector3f(x, y, z), rads);
 		}
 
-		void Matrix4f::rotate(Vector3f axis, float rads) {
-			rotate(axis.x, axis.y, axis.z, rads);
+		void Matrix4f::rotate(const Vector3f& axis, float rads) {
+			Matrix4f temp;
+			temp.setToRotation(axis, rads);
+			multiplySelf(temp);
 		}
 
 		void Matrix4f::setToScale(const Vector3f& scale) {

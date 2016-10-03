@@ -34,7 +34,7 @@ namespace engine {
 			void translate(const Vector4f& trans);
 			void translate(float x, float y, float z);
 			void rotate(float x, float y, float z, float rads);
-			void rotate(Vector3f axis, float rads);
+			void rotate(const Vector3f& axis, float rads);
 
 
 			void setToScale(const Vector3f& scale);
