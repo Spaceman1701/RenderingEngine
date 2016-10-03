@@ -139,7 +139,7 @@ namespace engine {
 
 		void Quaternion::rotateSelf(const Vector3f& axis, float rads) {
 			Quaternion temp(axis, rads);
-			temp = (*this) * temp;
+			temp = temp * (*this);
 			x = temp.x;
 			y = temp.y;
 			z = temp.z;
