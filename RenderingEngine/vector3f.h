@@ -14,6 +14,7 @@ namespace engine {
 			Vector3f norm(); //should copy vector
 			float mag2();
 			float mag();
+			
 		};
 		bool inline operator==(const Vector3f& left, const Vector3f& right) {
 			return (left.x == right.x) && (left.y == right.y) && (left.z == right.z);

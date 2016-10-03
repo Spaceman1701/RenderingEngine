@@ -23,5 +23,24 @@ namespace engine {
 			float m = mag();
 			return Vector4f(x / m, y / m, z / m, w / m);
 		}
+
+		float Vector4f::spaceMag2() {
+			return x*x + y*y + z*z;
+		}
+
+		float Vector4f::spaceMag() {
+			return sqrt(spaceMag2());
+		}
+
+		Vector3f Vector4f::asVector3() {
+			return Vector3f(x, y, z);
+		}
+
+		void Vector4f::fromVector3(const Vector3f& vec) {
+			x = vec.x;
+			y = vec.y;
+			z = vec.z;
+			w = 1.0f;
+		}
 	}
 }

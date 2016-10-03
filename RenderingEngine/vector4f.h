@@ -15,9 +15,15 @@ namespace engine {
 			Vector4f(Vector4f* vec);
 			Vector4f(const Vector3f& vec);
 
+			float spaceMag2(); //magnitude of x y z... so mag if Vec4 was Vec3
+			float spaceMag();
+
 			float mag2();
 			float mag();
 			Vector4f norm();
+
+			Vector3f asVector3();
+			void fromVector3(const Vector3f& vec);
 		};
 
 		bool inline operator==(const Vector4f& left, const Vector4f& right) {
