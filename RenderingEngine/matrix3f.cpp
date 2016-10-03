@@ -142,6 +142,7 @@ namespace engine {
 			result.x = mulRowVec(right, 0);
 			result.y = mulRowVec(right, 1);
 			result.z = mulRowVec(right, 2);
+			return result;
 		}
 
 		float Matrix3f::mulRowVec(const Vector3f& vec, int row) {

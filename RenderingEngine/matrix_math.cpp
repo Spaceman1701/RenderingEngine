@@ -24,7 +24,7 @@ namespace engine {
 				}
 			}
 		}
-		float mulRowCol(float left[], float right[], int row, int col, int size) {
+		float mulRowCol(const float left[], const float right[], int row, int col, int size) {
 			float acc = 0;
 			for (int i = 0; i < size; i++) {
 				acc += left[row + i*size] * right[i + (col*size)];

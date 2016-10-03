@@ -189,5 +189,107 @@ namespace engine {
 		float Matrix4f::mulRowVec(const Vector4f& vec, int row) {
 			return getValue(row, 0)*vec.x + getValue(row, 1)*vec.y + getValue(row, 2)*vec.z + getValue(row, 3)*vec.w;
 		}
+
+		Matrix3f Matrix4f::getMatrix3() {
+			return Matrix3f(mat[0], mat[1], mat[2],
+				mat[4], mat[5], mat[6],
+				mat[8], mat[9], mat[10]);
+		}
+
+		void Matrix4f::setMatrix3(const Matrix3f& m) {
+			mat[0] = m.getValue(0);
+			mat[1] = m.getValue(1);
+			mat[2] = m.getValue(2);
+
+			mat[4] = m.getValue(3);
+			mat[5] = m.getValue(4);
+			mat[6] = m.getValue(5);
+
+			mat[8] = m.getValue(6);
+			mat[9] = m.getValue(7);
+			mat[10] = m.getValue(8);
+		}
+		void Matrix4f::setToTranslation(float x, float y, float z) {
+			setIdentity();
+			mat[12] = x;
+			mat[13] = y;
+			mat[14] = z;
+		}
+		void Matrix4f::setToTranslation(const Vector3f& trans) {
+			setToTranslation(trans.x, trans.y, trans.z);
+		}
+		void Matrix4f::setToTranslation(const Vector4f& trans) {
+			setToTranslation(trans.x, trans.y, trans.z);
+		}
+
+		void Matrix4f::setToRotation(float x, float y, float z, float rads) {
+			setIdentity();
+		}
+		void Matrix4f::setToRotation(Vector3f axis, float rads) {
+			setToRotation(axis.x, axis.y, axis.z, rads);
+		}
+
+		void Matrix4f::translate(const Vector3f& trans) {
+			translate(trans.x, trans.y, trans.z);
+		}
+
+		void  Matrix4f::translate(const Vector4f& trans) {
+			translate(trans.x, trans.y, trans.z);
+		}
+
+		void Matrix4f::translate(float x, float y, float z) {
+			Matrix4f temp;
+			temp.setToTranslation(x, y, z);
+			multiplySelf(temp);
+		}
+
+		void Matrix4f::rotate(float x, float y, float z, float rads) {
+			Matrix4f temp;
+			temp.setToRotation(x, y, z, rads);
+			multiplySelf(temp);
+		}
+
+		void Matrix4f::rotate(Vector3f axis, float rads) {
+			rotate(axis.x, axis.y, axis.z, rads);
+		}
+
+		void Matrix4f::setToScale(const Vector3f& scale) {
+			setToScale(scale.x, scale.y, scale.z);
+		}
+
+		void Matrix4f::setToScale(float x, float y, float z) {
+			setIdentity();
+			mat[0] = x;
+			mat[5] = y;
+			mat[10] = z;
+		}
+
+		void Matrix4f::setToScale(float s) {
+			setToScale(s, s, s);
+		}
+
+		void Matrix4f::scale(const Vector3f& s) {
+			scale(s.x, s.y, s.z);
+		}
+
+		void Matrix4f::scale(float x, float y, float z) {
+			Matrix4f temp;
+			temp.setToScale(x, y, z);
+			multiplySelf(temp);
+		}
+
+		void Matrix4f::scale(float s) {
+			scale(s, s, s);
+		}
+
+		void Matrix4f::multiplySelf(const Matrix4f& right) {
+			float output[16];
+			for (int row = 0; row < 4; row++) {
+				for (int col = 0; col < 4; col++) {
+					output[row + col * 4] = mulRowCol(mat, right.mat, row, col, 4);
+				}
+			}
+			setToMatrix(output);
+		}
 	}
 }

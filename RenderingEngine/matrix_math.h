@@ -14,6 +14,6 @@ namespace engine {
 		}
 
 		void cofactorMatrix(const float mat[], float cofactor[], int row, int col, int size);
-		float mulRowCol(float left[], float right[], int row, int col, int size);
+		float mulRowCol(const float left[], const float right[], int row, int col, int size);
 	}
 }
