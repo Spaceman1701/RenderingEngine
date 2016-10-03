@@ -177,12 +177,12 @@ namespace engine {
 			return Matrix4f(output);
 		}
 
-		Vector4f Matrix4f::operator*(Vector4f& left) {
+		Vector4f Matrix4f::operator*(Vector4f& right) {
 			Vector4f output;
-			output.x = mulRowVec(left, 0);
-			output.y = mulRowVec(left, 1);
-			output.z = mulRowVec(left, 2);
-			output.w = mulRowVec(left, 3);
+			output.x = mulRowVec(right, 0);
+			output.y = mulRowVec(right, 1);
+			output.z = mulRowVec(right, 2);
+			output.w = mulRowVec(right, 3);
 			return output;
 		}
 

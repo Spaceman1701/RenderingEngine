@@ -126,6 +126,27 @@ namespace engine {
 		void Matrix3f::rawMatrix(float raw[9]) {
 			memcpy(raw, mat, sizeof(mat));
 		}
+
+		Matrix3f Matrix3f::operator*(Matrix3f& right) {
+			float output[9];
+			for (int row = 0; row < 9; row++) {
+				for (int col = 0; col < 9; col++) {
+					output[row + col * 3] = mulRowCol(mat, right.mat, row, col, 3);
+				}
+			}
+			return Matrix3f(output);
+		}
+
+		Vector3f Matrix3f::operator*(Vector3f& right) {
+			Vector3f result;
+			result.x = mulRowVec(right, 0);
+			result.y = mulRowVec(right, 1);
+			result.z = mulRowVec(right, 2);
+		}
+
+		float Matrix3f::mulRowVec(const Vector3f& vec, int row) {
+			return getValue(row, 0)*vec.x + getValue(row, 1)*vec.y + getValue(row, 2)*vec.z;
+		}
 		
 	}
 }

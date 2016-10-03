@@ -6,6 +6,7 @@ namespace engine {
 		class Matrix3f { //Column major... feelsuhgman
 		private:
 			float mat[9];
+			float mulRowVec(const Vector3f& vec, int row);
 		public:
 			Matrix3f();
 			Matrix3f(Matrix3f* mat);
@@ -48,6 +49,8 @@ namespace engine {
 				return (memcmp(mat, right.mat, sizeof(mat)) != 0);
 			}
 
+			Matrix3f operator*(Matrix3f& right);
+			Vector3f operator*(Vector3f& right);
 
 		};
 
