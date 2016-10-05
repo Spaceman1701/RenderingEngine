@@ -36,26 +36,21 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="math_test.cpp" />
     <ClCompile Include="math_util.cpp" />
     <ClCompile Include="matrix3f.cpp" />
     <ClCompile Include="matrix4f.cpp" />
     <ClCompile Include="matrix_math.cpp" />
     <ClCompile Include="quaternion.cpp" />
-    <ClCompile Include="test.cpp" />
     <ClCompile Include="vector3f.cpp" />
     <ClCompile Include="vector4f.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="math_test.h" />
     <ClInclude Include="matrix3f.h" />
     <ClInclude Include="matrix4f.h" />
     <ClInclude Include="matrix_math.h" />
     <ClInclude Include="quaternion.h" />
     <ClInclude Include="stdinc.h" />
-    <ClInclude Include="test.h" />
     <ClInclude Include="math_util.h" />
-    <ClInclude Include="unit_test.h" />
     <ClInclude Include="vector3f.h" />
     <ClInclude Include="vector4f.h" />
   </ItemGroup>

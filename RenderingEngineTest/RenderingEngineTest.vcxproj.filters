@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\test">
+      <UniqueIdentifier>{f5222ad4-0c5b-46ed-9854-b379845273a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\test\math">
+      <UniqueIdentifier>{40d47988-d172-4e09-8c5e-51e70dbf170c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\test">
+      <UniqueIdentifier>{acbf336f-5340-41b3-96d1-5c436c1651b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\test\math">
+      <UniqueIdentifier>{0fa0a3d6-73c8-4fce-a201-e1cc33ca372b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -21,13 +33,16 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="string_functions.h">
+      <Filter>Header Files\test\math</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="unittest1.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="math_util_test.cpp">
+      <Filter>Source Files\test\math</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

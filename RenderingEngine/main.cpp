@@ -2,19 +2,9 @@
 #include <glfw3.h>
 #include <iostream>
 #include <inttypes.h>
-//define TEST to run tests... not the best system, but it should be okay
-//#define TEST 0
-#ifdef TEST
-#include "test.h"
-#endif //TEST
+
 
 int main() {
-#ifdef TEST
-	std::cout << "started in test mode!" << std::endl;
-	test::runAllTests();
-	std::cin.ignore();
-	return 0;
-#endif // TEST
 	std::cout << "starting" << std::endl;
 	if (!glfwInit()) {
 		std::cout << "failed glfw init" << std::endl;

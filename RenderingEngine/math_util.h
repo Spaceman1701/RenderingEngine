@@ -1,5 +1,4 @@
 #pragma once
-#include "unit_test.h"
 #include "vector3f.h"
 #include "vector4f.h"
 #include "matrix4f.h"
@@ -7,7 +6,7 @@
 
 namespace engine {
 	namespace math {
-		TESTABLE Matrix4f createProjectionMatrix(float near, float far, float fov, float aspect);
+		Matrix4f createProjectionMatrix(float near, float far, float fov, float aspect);
 		Matrix4f createOrthographicMatrix(float near, float far, float left, float right, float top, float bottom);
 		Matrix4f createFrustrumMatrix(float near, float far, float left, float right, float top, float bottom);
 
