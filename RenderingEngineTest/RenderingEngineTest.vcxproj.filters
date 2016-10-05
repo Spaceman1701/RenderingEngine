@@ -22,9 +22,6 @@
     <Filter Include="Header Files\test">
       <UniqueIdentifier>{acbf336f-5340-41b3-96d1-5c436c1651b7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\test\math">
-      <UniqueIdentifier>{0fa0a3d6-73c8-4fce-a201-e1cc33ca372b}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -34,7 +31,7 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="string_functions.h">
-      <Filter>Header Files\test\math</Filter>
+      <Filter>Header Files\test</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

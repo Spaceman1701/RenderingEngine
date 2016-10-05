@@ -1,8 +1,5 @@
 #include "stdafx.h"
-#include "string_functions.h"
-#include "CppUnitTest.h"
 #include "math_util.h"
-#pragma comment(lib, "RenderingEngine.lib")
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace RenderingEngineTest
