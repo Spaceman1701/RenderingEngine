@@ -41,15 +41,15 @@ namespace engine {
 		}
 
 		void Quaternion::fromEulerAngles(float x, float y, float z) {
-			fromEulerAngles(x, y, z);
+			fromEulerAngles(Vector3f(x, y, z));
 		}
 
 		void Quaternion::fromAxisAngle(const Vector3f& axis, float rads) {
 			Vector3f norm_axis = axis.norm();
-			w = cos(rads / 2);
-			x = sin(rads / 2) * axis.x;
-			y = sin(rads / 2) * axis.y;
-			z = sin(rads / 2) * axis.z;
+			w = cosf(rads / 2);
+			x = sinf(rads / 2) * axis.x;
+			y = sinf(rads / 2) * axis.y;
+			z = sinf(rads / 2) * axis.z;
 		}
 
 		void Quaternion::fromAxisAngle(float x, float y, float z, float rads) {
@@ -152,7 +152,7 @@ namespace engine {
 			if (l2 == 1.0f) { //Should use epsilon value
 				return 1;
 			}
-			return sqrt(l2);
+			return sqrtf(l2);
 		}
 
 		Matrix3f Quaternion::toMatrix() {

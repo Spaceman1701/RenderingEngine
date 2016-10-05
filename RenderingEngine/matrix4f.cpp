@@ -229,8 +229,8 @@ namespace engine {
 		void Matrix4f::setToRotation(Vector3f axis, float rads) {
 			setIdentity();
 			Vector3f norm_axis = axis.norm();
-			float c = cos(rads);
-			float s = sin(rads);
+			float c = cosf(rads);
+			float s = sinf(rads);
 			float t = 1.0f - c;
 			float x = norm_axis.x;
 			float y = norm_axis.y;

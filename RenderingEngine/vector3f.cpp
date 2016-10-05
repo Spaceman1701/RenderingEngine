@@ -24,7 +24,7 @@ float Vector3f::mag2() const{
 	return x*x + y*y + z*z;
 }
 float Vector3f::mag() const{
-	return sqrt(mag2());
+	return sqrtf(mag2());
 }
 namespace engine {
 	namespace math {

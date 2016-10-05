@@ -197,6 +197,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>D:\Data\Documents\CRendering\RenderingEngine\ogl\glew\include;D:\Data\Documents\CRendering\RenderingEngine\ogl\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/NODEFAULTLIB:MSVCRT %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>D:\Data\Documents\CRendering\RenderingEngine\ogl\glew\lib;D:\Data\Documents\CRendering\RenderingEngine\ogl\glfw\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>

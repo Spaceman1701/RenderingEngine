@@ -4,7 +4,7 @@
 namespace engine {
 	namespace math {
 		Matrix4f createProjectionMatrix(float near, float far, float fov, float aspect) {
-			float top = near * tanf((M_PI / 180.0f) * (fov / 2));
+			float top = near * tanf((((float)M_PI) / 180.0f) * (fov / 2));
 			float bottom = -top;
 			float right = top * aspect;
 			float left = -right;

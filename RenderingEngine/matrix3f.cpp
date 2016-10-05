@@ -111,6 +111,7 @@ namespace engine {
 			inv[6] = determinant2(getValue(0, 1), getValue(1, 1), getValue(0, 2), getValue(1, 2)) * invdet;
 			inv[7] = determinant2(getValue(0, 2), getValue(1, 2), getValue(0, 0), getValue(1, 0)) * invdet;
 			inv[8] = determinant2(getValue(0, 0), getValue(1, 0), getValue(0, 1), getValue(1, 1)) * invdet;
+			return true;
 		}
 
 		Matrix3f Matrix3f::transpose() {

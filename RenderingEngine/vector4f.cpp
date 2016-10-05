@@ -17,7 +17,7 @@ namespace engine {
 			return x*x + y*y + z*z + w*w;
 		}
 		float Vector4f::mag() {
-			return sqrt(mag2());
+			return sqrtf(mag2());
 		}
 		Vector4f Vector4f::norm() {
 			float m = mag();
@@ -29,7 +29,7 @@ namespace engine {
 		}
 
 		float Vector4f::spaceMag() {
-			return sqrt(spaceMag2());
+			return sqrtf(spaceMag2());
 		}
 
 		Vector3f Vector4f::asVector3() {

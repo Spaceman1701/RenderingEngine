@@ -25,5 +25,12 @@ namespace RenderingEngineTest
 			Assert::AreEqual(Vector3f(0.5, 0.25, 0.0), v, L"vec3 lerp failed", LINE_INFO());
 		}
 
+		TEST_METHOD(isZeroTest) {
+			using namespace engine::math;
+			bool v = isZero(0.01f, 0.05f);
+			Assert::AreEqual(true, v, L"false positive", LINE_INFO());
+			bool v2 = isZero(0.1f, 0.05f);
+			Assert::AreEqual(false, v2, L"false negative", LINE_INFO());
+		}
 	};
 }
