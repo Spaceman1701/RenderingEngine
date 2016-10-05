@@ -101,5 +101,8 @@
     <ClInclude Include="stdinc.h">
       <Filter>Header Files\engine</Filter>
     </ClInclude>
+    <ClInclude Include="unit_test.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

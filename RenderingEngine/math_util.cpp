@@ -1,3 +1,4 @@
+#include "unit_test.h"
 #include "math_util.h"
 #define _USE_MATH_DEFINES
 #include <math.h>
@@ -45,7 +46,7 @@ namespace engine {
 			return mat;
 		}
 
-		float lerp(float a, float b, float t) {
+		TESTABLE float lerp(float a, float b, float t) {
 			return (1 - t) * a + t * b;
 		}
 

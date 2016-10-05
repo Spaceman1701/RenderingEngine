@@ -2,7 +2,7 @@
 #include "vector3f.h"
 #include "matrix3f.h"
 #include "matrix4f.h"
-#include <iostream>;
+#include <iostream>
 namespace test {
 	namespace math {
 		bool runTests(int* numFailed) {
