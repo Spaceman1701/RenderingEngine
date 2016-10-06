@@ -38,5 +38,14 @@ namespace RenderingEngineTest
 			bool result = isZero(x * y, 0.00001f);
 			Assert::AreEqual(true, result, L"axis dot not zero", LINE_INFO());
 		}
+
+		TEST_METHOD(vector3CrossTest) {
+			using namespace engine::math;
+			Vector3f x(1.0f, 0.0f, 0.0f);
+			Vector3f y(0.0f, 1.0f, 0.0f);
+			Vector3f result = cross(x, y);
+			Vector3f expected = Vector3f(0.0f, 0.0f, 1.0f);
+			Assert::AreEqual(expected, result, L"cross product", LINE_INFO());
+		}
 	};
 }

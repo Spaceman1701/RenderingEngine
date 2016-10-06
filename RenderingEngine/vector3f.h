@@ -3,6 +3,8 @@ namespace engine {
 	namespace math {
 		class Vector3f {
 		public:
+			static const Vector3f UP;
+
 			float x;
 			float y;
 			float z;
