@@ -5,7 +5,7 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace RenderingEngineTest
 {
-	TEST_CLASS(math_util_test)
+	TEST_CLASS(vector3f_test)
 	{
 	public:
 		TEST_METHOD(vector3EqualityTest) {
