@@ -41,5 +41,8 @@
     <ClCompile Include="math_util_test.cpp">
       <Filter>Source Files\test\math</Filter>
     </ClCompile>
+    <ClCompile Include="vector3f_test.cpp">
+      <Filter>Source Files\test\math</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
