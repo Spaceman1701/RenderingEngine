@@ -9,27 +9,29 @@ namespace engine{
 			return length;
 		}
 
-		bool loadShader(const char fileLocation[], char** shaderData) {
+		char* loadShader(const char fileLocation[]) {
 			std::ifstream file;
 			file.open(fileLocation);
 			if (!file) {
-				return false;
+				return NULL;
 			}
 
 			unsigned long length = getFileLength(file);
-
-			*shaderData = new char[255];
-			(*shaderData)[length] = 0; //0 terminate strings
+			char* shaderData;
+			shaderData = new char[length+1];
+			(shaderData)[length] = 0; //0 terminate strings
 			char c;
 			int i = 0;
 			while (file.good()) {
 				c = file.get();
-				*shaderData[i] = c;
+				shaderData[i] = c;
 				i++;
 			}
 
+			shaderData[i-1] = 0;
+
 			file.close();
-			return true;
+			return shaderData;
 		}
 	}
 }

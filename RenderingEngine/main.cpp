@@ -3,16 +3,9 @@
 #include <iostream>
 #include <inttypes.h>
 
-#define TEST
+
 #include "shader_loader.h"
 int main() {
-#ifdef TEST
-	using namespace engine::asset;
-	char* data;
-	loadShader("shaderTest.text", &data);
-	std::cout << data << std::endl;
-	return 0;
-#endif // TEST
 
 	std::cout << "starting" << std::endl;
 	if (!glfwInit()) {
