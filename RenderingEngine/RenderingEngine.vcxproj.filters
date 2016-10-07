@@ -25,6 +25,12 @@
     <Filter Include="Header Files\engine\math">
       <UniqueIdentifier>{c16db102-5d29-4ca4-8e45-2f5b42a7f71e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\engine\asset">
+      <UniqueIdentifier>{e6384731-968d-4344-b0a1-f94f91e655f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\asset">
+      <UniqueIdentifier>{75517541-4ba8-4d4b-9150-46db1afba80a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -51,6 +57,9 @@
     <ClCompile Include="math_util.cpp">
       <Filter>Source Files\engine\math</Filter>
     </ClCompile>
+    <ClCompile Include="shader_loader.cpp">
+      <Filter>Source Files\engine\asset</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="vector3f.h">
@@ -76,6 +85,9 @@
     </ClInclude>
     <ClInclude Include="stdinc.h">
       <Filter>Header Files\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="shader_loader.h">
+      <Filter>Header Files\asset</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

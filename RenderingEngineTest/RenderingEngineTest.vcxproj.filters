@@ -22,6 +22,9 @@
     <Filter Include="Header Files\test">
       <UniqueIdentifier>{acbf336f-5340-41b3-96d1-5c436c1651b7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\test\asset">
+      <UniqueIdentifier>{d7e06de3-af96-40f3-9013-4d9dc803ec1d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -43,6 +46,9 @@
     </ClCompile>
     <ClCompile Include="vector3f_test.cpp">
       <Filter>Source Files\test\math</Filter>
+    </ClCompile>
+    <ClCompile Include="shader_loader_test.cpp">
+      <Filter>Source Files\test\asset</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
