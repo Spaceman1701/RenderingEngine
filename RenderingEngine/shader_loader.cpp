@@ -28,7 +28,7 @@ namespace engine{
 				i++;
 			}
 
-			shaderData[i-1] = 0;
+			shaderData[i-1] = 0; //length isn't always correct, this is
 
 			file.close();
 			return shaderData;
