@@ -1,6 +1,6 @@
 #pragma once
 namespace engine{
-	namespace asset {
+	namespace io {
 		char* loadShader(const char fileLocation[]);
 	}
 }

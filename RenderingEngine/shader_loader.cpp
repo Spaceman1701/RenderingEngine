@@ -1,7 +1,7 @@
 #include "shader_loader.h"
 #include <fstream>
 namespace engine{
-	namespace asset{
+	namespace io{
 		unsigned long getFileLength(std::ifstream& file) {
 			file.seekg(0, std::ios_base::end);
 			unsigned long length = file.tellg();

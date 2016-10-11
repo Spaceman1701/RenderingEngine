@@ -8,7 +8,7 @@ namespace RenderingEngineTest
 	TEST_CLASS(shader_load_test)
 	{
 		TEST_METHOD(loadShaderTest) {
-			using namespace engine::asset;
+			using namespace engine::io;
 			char* data;
 			data = loadShader("shaderTest.txt");
 
