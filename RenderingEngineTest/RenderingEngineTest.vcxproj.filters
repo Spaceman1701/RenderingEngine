@@ -50,5 +50,8 @@
     <ClCompile Include="shader_loader_test.cpp">
       <Filter>Source Files\test\io</Filter>
     </ClCompile>
+    <ClCompile Include="vector4f_test.cpp">
+      <Filter>Source Files\test\math</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

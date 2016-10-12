@@ -235,6 +235,7 @@
     </ClCompile>
     <ClCompile Include="math_util_test.cpp" />
     <ClCompile Include="vector3f_test.cpp" />
+    <ClCompile Include="vector4f_test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RenderingEngine\RenderingEngine.vcxproj">
