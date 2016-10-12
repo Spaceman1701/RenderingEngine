@@ -35,6 +35,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="engine.cpp" />
+    <ClCompile Include="engine_config.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="math_util.cpp" />
     <ClCompile Include="matrix3f.cpp" />
@@ -46,6 +48,8 @@
     <ClCompile Include="vector4f.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="engine.h" />
+    <ClInclude Include="engine_config.h" />
     <ClInclude Include="glmesh.h" />
     <ClInclude Include="glprogram.h" />
     <ClInclude Include="gltexture.h" />
@@ -58,6 +62,7 @@
     <ClInclude Include="program.h" />
     <ClInclude Include="program_pool.h" />
     <ClInclude Include="quaternion.h" />
+    <ClInclude Include="scene.h" />
     <ClInclude Include="shader_loader.h" />
     <ClInclude Include="stdinc.h" />
     <ClInclude Include="math_util.h" />
@@ -99,7 +104,7 @@
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
@@ -155,6 +160,9 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DLL|x64'">
     <TargetExt>.dll</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetExt>.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
