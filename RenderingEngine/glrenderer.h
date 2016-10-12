@@ -10,8 +10,9 @@ namespace engine {
 				private:
 					const GLFWvidmode* vidMode;
 					GLFWwindow* window;
+					int num_monitors;
 
-					void createWindow(int res_x, int res_y, bool fullscreen);
+					void createWindow(int res_x, int res_y, bool fullscreen, int monitor);
 				public:
 					void init(EngineConfig& config);
 					void draw(CommandList& renderCommands);

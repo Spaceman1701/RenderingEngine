@@ -8,12 +8,12 @@ void error_callback(int error, const char* desc) {
 	LOG_ERROR << "ERROR: " << error << ", " << desc;
 }
 
-void GLRenderer::createWindow(int res_x, int res_y, bool fullscreen) {
+void GLRenderer::createWindow(int res_x, int res_y, bool fullscreen, int monitor) {
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 5);
 	vidMode = glfwGetVideoMode(glfwGetPrimaryMonitor());
 	if (fullscreen) {
-		window = glfwCreateWindow(res_x, res_y, "GLRENDERER", glfwGetPrimaryMonitor(), NULL);
+		window = glfwCreateWindow(res_x, res_y, "GLRENDERER", glfwGetMonitors(&num_monitors)[monitor] , NULL);
 	}
 	else {
 		window = glfwCreateWindow(res_x, res_y, "test", NULL, NULL);
@@ -30,7 +30,7 @@ void GLRenderer::init(EngineConfig& config) {
 		LOG_ERROR << "glfw init failed!";
 	}
 	glfwSetErrorCallback(error_callback);
-	createWindow(config.getResolutionWidth(), config.getResolutionHeight(), config.getFullscreen());
+	createWindow(config.getResolutionWidth(), config.getResolutionHeight(), config.getFullscreen(), 0);
 	if (glewInit() != GLEW_OK) {
 		LOG_ERROR << "glew init failed!";
 	}

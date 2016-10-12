@@ -55,6 +55,7 @@
     <ClInclude Include="glprogram.h" />
     <ClInclude Include="glrenderer.h" />
     <ClInclude Include="gltexture.h" />
+    <ClInclude Include="input.h" />
     <ClInclude Include="matrix3f.h" />
     <ClInclude Include="matrix4f.h" />
     <ClInclude Include="matrix_math.h" />

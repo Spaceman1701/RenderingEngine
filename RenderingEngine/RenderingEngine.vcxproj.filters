@@ -173,5 +173,8 @@
     <ClInclude Include="glrenderer.h">
       <Filter>Header Files\engine\core\render\glrender</Filter>
     </ClInclude>
+    <ClInclude Include="input.h">
+      <Filter>Header Files\engine\io</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
