@@ -208,7 +208,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)\ogl\glew\include;$(SolutionDir)\ogl\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\ogl\glew\include;$(SolutionDir)\RenderingEngine;$(SolutionDir)\ogl\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>D:\Data\Documents\CRendering\RenderingEngine\ogl\glew\lib;D:\Data\Documents\CRendering\RenderingEngine\ogl\glfw\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>

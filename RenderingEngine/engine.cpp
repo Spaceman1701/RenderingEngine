@@ -1,10 +1,15 @@
+#include "stdinc.h"
 #include "engine.h"
 #include "glrenderer.h"
+
 using namespace engine::core;
 using namespace engine::core::render;
 
 Engine::Engine(bool fullscreen, int resolution_x, int resolution_y, bool vsync, int num_vblanks) : 
 	config(fullscreen, resolution_x, resolution_y, vsync, num_vblanks){
+	plog::init(plog::verbose, "logs/log.elog");
+	LOG_DEBUG << "engine init started";
+
 	this->shouldQuit = false;
 	renderer = new gl::GLRenderer();
 }
