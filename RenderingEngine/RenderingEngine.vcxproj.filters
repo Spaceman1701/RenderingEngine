@@ -55,6 +55,9 @@
     <Filter Include="Header Files\engine\core\render\glrender">
       <UniqueIdentifier>{dad1ce6b-50d8-4619-9eb7-fb91645b0ace}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\engine\core\render\glrenderer">
+      <UniqueIdentifier>{4523e53e-c907-4e4a-a3db-752cfae5c406}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -89,6 +92,9 @@
     </ClCompile>
     <ClCompile Include="engine.cpp">
       <Filter>Source Files\engine\core</Filter>
+    </ClCompile>
+    <ClCompile Include="glrenderer.cpp">
+      <Filter>Source Files\engine\core\render\glrenderer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -163,6 +169,9 @@
     </ClInclude>
     <ClInclude Include="renderer.h">
       <Filter>Header Files\engine\core\render</Filter>
+    </ClInclude>
+    <ClInclude Include="glrenderer.h">
+      <Filter>Header Files\engine\core\render\glrender</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

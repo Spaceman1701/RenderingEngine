@@ -37,6 +37,7 @@
   <ItemGroup>
     <ClCompile Include="engine.cpp" />
     <ClCompile Include="engine_config.cpp" />
+    <ClCompile Include="glrenderer.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="math_util.cpp" />
     <ClCompile Include="matrix3f.cpp" />
@@ -52,6 +53,7 @@
     <ClInclude Include="engine_config.h" />
     <ClInclude Include="glmesh.h" />
     <ClInclude Include="glprogram.h" />
+    <ClInclude Include="glrenderer.h" />
     <ClInclude Include="gltexture.h" />
     <ClInclude Include="matrix3f.h" />
     <ClInclude Include="matrix4f.h" />
@@ -212,6 +214,12 @@
       <AdditionalLibraryDirectories>D:\Data\Documents\CRendering\RenderingEngine\ogl\glew\lib;D:\Data\Documents\CRendering\RenderingEngine\ogl\glfw\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>glfw3.lib;glew32.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <Lib>
+      <AdditionalDependencies>glfw3.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>$(SolutionDir)\ogl\glew\lib;$(SolutionDir)\ogl\glfw\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Test|x64'">
     <ClCompile>

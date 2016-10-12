@@ -1,5 +1,6 @@
 #pragma once
 #include "engine.h"
+#include "stdinc.h"
 namespace engine {
 	namespace core {
 		class Engine;
@@ -11,7 +12,7 @@ namespace engine {
 		public:
 			virtual ~Scene();
 			virtual void update(float deltaT) = 0;
-			virtual void draw() = 0;
+			virtual void draw(CommandList& commands) = 0;
 		};
 	}
 }
