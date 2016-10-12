@@ -1,6 +1,6 @@
 #include "engine_config.h"
 
-using namespace engine::render;
+using namespace engine::core;
 
 EngineConfig::EngineConfig(bool fullscreen, int resolution_width, int resolution_height, bool vsync, int num_vblank) {
 	this->resolution_width = resolution_width;

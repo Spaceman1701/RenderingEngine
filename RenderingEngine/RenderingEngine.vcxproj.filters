@@ -37,14 +37,23 @@
     <Filter Include="Header Files\engine\graphics\glgraphics">
       <UniqueIdentifier>{8b196247-bda2-44ed-8486-58e4486d695f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\engine\render">
-      <UniqueIdentifier>{ffbd5252-f11a-484b-ac8b-c5be3b0f0052}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\engine\render">
-      <UniqueIdentifier>{fbe5c46e-f4ce-402f-8c50-299f203ca18e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\engine\scene">
       <UniqueIdentifier>{78e8e51b-841a-44c3-b105-666a012e7b4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine\core">
+      <UniqueIdentifier>{fbe5c46e-f4ce-402f-8c50-299f203ca18e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine\core\render">
+      <UniqueIdentifier>{4fe18581-929d-4db3-9ae0-f150b662c50d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\engine\core">
+      <UniqueIdentifier>{ffbd5252-f11a-484b-ac8b-c5be3b0f0052}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\engine\core\render">
+      <UniqueIdentifier>{719d77ff-87e4-4d87-91ae-6960718f0352}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\engine\core\render\glrender">
+      <UniqueIdentifier>{dad1ce6b-50d8-4619-9eb7-fb91645b0ace}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -76,10 +85,10 @@
       <Filter>Source Files\engine\io</Filter>
     </ClCompile>
     <ClCompile Include="engine_config.cpp">
-      <Filter>Source Files\engine\render</Filter>
+      <Filter>Source Files\engine\core</Filter>
     </ClCompile>
     <ClCompile Include="engine.cpp">
-      <Filter>Source Files\engine\render</Filter>
+      <Filter>Source Files\engine\core</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -147,10 +156,13 @@
       <Filter>Header Files\engine\scene</Filter>
     </ClInclude>
     <ClInclude Include="engine_config.h">
-      <Filter>Header Files\engine\render</Filter>
+      <Filter>Header Files\engine\core</Filter>
     </ClInclude>
     <ClInclude Include="engine.h">
-      <Filter>Header Files\engine\render</Filter>
+      <Filter>Header Files\engine\core</Filter>
+    </ClInclude>
+    <ClInclude Include="renderer.h">
+      <Filter>Header Files\engine\core\render</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

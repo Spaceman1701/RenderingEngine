@@ -62,6 +62,7 @@
     <ClInclude Include="program.h" />
     <ClInclude Include="program_pool.h" />
     <ClInclude Include="quaternion.h" />
+    <ClInclude Include="renderer.h" />
     <ClInclude Include="scene.h" />
     <ClInclude Include="shader_loader.h" />
     <ClInclude Include="stdinc.h" />
@@ -205,7 +206,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>D:\Data\Documents\CRendering\RenderingEngine\ogl\glew\include;D:\Data\Documents\CRendering\RenderingEngine\ogl\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\ogl\glew\include;$(SolutionDir)\ogl\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>D:\Data\Documents\CRendering\RenderingEngine\ogl\glew\lib;D:\Data\Documents\CRendering\RenderingEngine\ogl\glfw\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
