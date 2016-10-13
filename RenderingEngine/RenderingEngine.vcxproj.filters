@@ -96,6 +96,9 @@
     <ClCompile Include="glrenderer.cpp">
       <Filter>Source Files\engine\core\render\glrenderer</Filter>
     </ClCompile>
+    <ClCompile Include="glcontext.cpp">
+      <Filter>Source Files\engine\core\render\glrenderer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="vector3f.h">
@@ -175,6 +178,12 @@
     </ClInclude>
     <ClInclude Include="input.h">
       <Filter>Header Files\engine\io</Filter>
+    </ClInclude>
+    <ClInclude Include="context.h">
+      <Filter>Header Files\engine\core\render</Filter>
+    </ClInclude>
+    <ClInclude Include="glcontext.h">
+      <Filter>Header Files\engine\core\render\glrender</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

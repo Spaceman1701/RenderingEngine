@@ -1,6 +1,7 @@
 #include "stdinc.h"
 #include "engine.h"
-#include "glrenderer.h"
+#include "glcontext.h"
+#include "input.h"
 
 using namespace engine::core;
 using namespace engine::core::render;
@@ -11,7 +12,7 @@ Engine::Engine(bool fullscreen, int resolution_x, int resolution_y, bool vsync, 
 	LOG_DEBUG << "engine init started";
 
 	this->shouldQuit = false;
-	renderer = new gl::GLRenderer();
+	context = new gl::GLContext();
 }
 
 void Engine::quit() {
@@ -19,17 +20,20 @@ void Engine::quit() {
 }
 
 void Engine::run(engine::scene::Scene* scene) {
-	renderer->init(config);
+	context->init(config);
 	CommandList renderCommands;
 	while (!shouldQuit) {
 		//scene->update(0.0f); //DeltaT no
 		//scene->draw(renderCommands);
 
-		renderer->draw(renderCommands); //multithread later
+		context->draw(renderCommands); //multithread later
 		renderCommands.clear();
+
+		if (context->getKey(KEY_ESCAPE) == BUTTON_PRESS) {
+			quit();
+		}
 	}
-	
-	delete renderer; //probably do cleanup 
+	delete context;
 }
 
 bool Engine::start(engine::scene::Scene* scene) {

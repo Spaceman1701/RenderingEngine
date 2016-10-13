@@ -37,6 +37,7 @@
   <ItemGroup>
     <ClCompile Include="engine.cpp" />
     <ClCompile Include="engine_config.cpp" />
+    <ClCompile Include="glcontext.cpp" />
     <ClCompile Include="glrenderer.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="math_util.cpp" />
@@ -49,8 +50,10 @@
     <ClCompile Include="vector4f.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="context.h" />
     <ClInclude Include="engine.h" />
     <ClInclude Include="engine_config.h" />
+    <ClInclude Include="glcontext.h" />
     <ClInclude Include="glmesh.h" />
     <ClInclude Include="glprogram.h" />
     <ClInclude Include="glrenderer.h" />

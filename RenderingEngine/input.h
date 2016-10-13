@@ -187,3 +187,19 @@
 #define JOYSTICK_15            14
 #define JOYSTICK_16            15
 #define JOYSTICK_LAST          JOYSTICK_16
+
+#define BUTTON_RELEASE                0
+/*! @brief The key or mouse button was pressed.
+*
+*  The key or mouse button was pressed.
+*
+*  @ingroup input
+*/
+#define BUTTON_PRESS                  1
+/*! @brief The key was held down until it repeated.
+*
+*  The key was held down until it repeated.
+*
+*  @ingroup input
+*/
+#define BUTTON_REPEAT                 2

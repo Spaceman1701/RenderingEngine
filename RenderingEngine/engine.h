@@ -2,16 +2,17 @@
 #include "scene.h"
 #include "engine_config.h"
 #include "renderer.h"
+
 namespace engine {
 	namespace core {
 		namespace render {
-			class IRenderer;
+			class IContext;
 		}
 		using namespace render;
 		class Engine {
 		private:
 			EngineConfig config;
-			IRenderer* renderer;
+			IContext* context;
 			bool shouldQuit;
 
 			void run(engine::scene::Scene* scene);
