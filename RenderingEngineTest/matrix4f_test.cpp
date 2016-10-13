@@ -28,6 +28,51 @@ namespace RenderingEngineTest
 			Assert::AreEqual(true, equal, L"setToTranslation Failed", LINE_INFO());
 		}
 
+		TEST_METHOD(Matrix4SetToScaleTest) {
+			using namespace engine::math;
+			float x = 5.0f;
+			float y = -2.3f;
+			float z = 1.6f;
+
+			Vector4f col1(x, 0.0f, 0.0f, 0.0f);
+			Vector4f col2(0.0f, y, 0.0f, 0.0f);
+			Vector4f col3(0.0f, 0.0f, z, 0.0f);
+			Vector4f col4(0.0f, 0.0f, 0.0f, 1.0f);
+
+			Matrix4f mat(col1, col2, col3, col4);
+			Matrix4f mat2(col3, col2, col4, col1);
+
+			mat2.setToScale(x, y, z);
+
+			bool equal = mat == mat2;
+			Assert::AreEqual(true, equal, L"setToScale Failed", LINE_INFO());
+		}
+		/*
+		TEST_METHOD(Matrix4ScaleTest) {
+			using namespace engine::math;
+			float x = 1.0f;
+			float y = 2.0f;
+			float z = 3.0f;
+
+			Vector4f col1(1.0f, 2.0f, 3.0f, 4.0f);
+			Vector4f col2(5.0f, 6.0f, 7.0f, 8.0f);
+			Vector4f col3(9.0f, 10.0f, 11.0f, 12.0f);
+			Vector4f col4(13.0f, 14.0f, 15.0f, 15.0f);
+
+			Vector4f sCol1(51.0f, 0.0f, 0.0f, 0.0f);
+			Vector4f sCol2(0.0f, 58.0f, 0.0f, 0.0f);
+			Vector4f sCol3(0.0f, 0.0f, 65.0f, 0.0f);
+			Vector4f sCol4(0.0f, 0.0f, 0.0f, 72.0f);
+
+			Matrix4f mat(col1, col2, col3, col4);
+			Matrix4f mat2(sCol1, sCol2, sCol3, sCol4);
+
+			mat.scale(x, y, z);
+
+			bool equal = mat == mat2;
+			Assert::AreEqual(true, equal, L"scale Failed", LINE_INFO());
+		}*/
+
 		TEST_METHOD(Matrix4GetValueIntTest) {
 			using namespace engine::math;
 
