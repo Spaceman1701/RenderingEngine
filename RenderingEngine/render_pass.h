@@ -9,7 +9,7 @@ namespace engine {
 			protected:
 				std::string name;
 			public:
-				virtual void registerOutputs()
+				virtual void registerOutputs() = 0;
 				virtual void doPass(IRenderer* renderer) = 0;
 				virtual ~AbstractRenderPass() {}
 			};

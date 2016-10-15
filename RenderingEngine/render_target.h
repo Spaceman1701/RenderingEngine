@@ -8,12 +8,17 @@ namespace engine {
 			private:
 				TargetType type;
 				std::string id;
+				int width;
+				int height;
 			public:
-				RenderTarget(TargetType t, std::string id);
+				RenderTarget(int width, int height, TargetType t, std::string id);
 				RenderTarget(RenderTarget& r);
 				
 				TargetType getTargetType();
 				std::string getId();
+
+				int getWidth();
+				int getHeight();
 			};
 		}
 	}

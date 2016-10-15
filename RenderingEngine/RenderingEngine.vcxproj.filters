@@ -105,6 +105,9 @@
     <ClCompile Include="render_target.cpp">
       <Filter>Source Files\engine\core\render</Filter>
     </ClCompile>
+    <ClCompile Include="gltarget_selector.cpp">
+      <Filter>Source Files\engine\core\render\glrenderer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="vector3f.h">
@@ -208,6 +211,9 @@
     </ClInclude>
     <ClInclude Include="render_target_manager.h">
       <Filter>Header Files\engine\core\render</Filter>
+    </ClInclude>
+    <ClInclude Include="gltarget_selector.h">
+      <Filter>Header Files\engine\core\render\glrender</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

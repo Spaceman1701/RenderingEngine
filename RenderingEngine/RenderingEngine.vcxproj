@@ -40,6 +40,7 @@
     <ClCompile Include="engine_config.cpp" />
     <ClCompile Include="glcontext.cpp" />
     <ClCompile Include="glrenderer.cpp" />
+    <ClCompile Include="gltarget_selector.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="math_util.cpp" />
     <ClCompile Include="matrix3f.cpp" />
@@ -60,6 +61,7 @@
     <ClInclude Include="glmesh.h" />
     <ClInclude Include="glprogram.h" />
     <ClInclude Include="glrenderer.h" />
+    <ClInclude Include="gltarget_selector.h" />
     <ClInclude Include="gltexture.h" />
     <ClInclude Include="input.h" />
     <ClInclude Include="matrix3f.h" />

@@ -1,4 +1,5 @@
 #pragma once
+#include "stdinc.h"
 #include "render_target_types.h"
 #include <string>
 
@@ -9,12 +10,17 @@ namespace engine {
 			private:
 				DepthTargetType type;
 				std::string id;
+				int width;
+				int height;
 			public:
-				DepthTarget(DepthTargetType type, std::string id);
+				DepthTarget(int width, int height, DepthTargetType type, std::string id);
 				DepthTarget(DepthTarget& dt);
 
 				DepthTargetType getType();
 				std::string getId();
+
+				int getWidth();
+				int getHeight();
 			};
 		}
 	}
