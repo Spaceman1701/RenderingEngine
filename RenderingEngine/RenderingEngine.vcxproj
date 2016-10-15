@@ -35,6 +35,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="depth_target.cpp" />
     <ClCompile Include="engine.cpp" />
     <ClCompile Include="engine_config.cpp" />
     <ClCompile Include="glcontext.cpp" />
@@ -45,12 +46,14 @@
     <ClCompile Include="matrix4f.cpp" />
     <ClCompile Include="matrix_math.cpp" />
     <ClCompile Include="quaternion.cpp" />
+    <ClCompile Include="render_target.cpp" />
     <ClCompile Include="shader_loader.cpp" />
     <ClCompile Include="vector3f.cpp" />
     <ClCompile Include="vector4f.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="context.h" />
+    <ClInclude Include="depth_target.h" />
     <ClInclude Include="engine.h" />
     <ClInclude Include="engine_config.h" />
     <ClInclude Include="glcontext.h" />
@@ -69,6 +72,11 @@
     <ClInclude Include="program_pool.h" />
     <ClInclude Include="quaternion.h" />
     <ClInclude Include="renderer.h" />
+    <ClInclude Include="render_output_registry.h" />
+    <ClInclude Include="render_pass.h" />
+    <ClInclude Include="render_target.h" />
+    <ClInclude Include="render_target_manager.h" />
+    <ClInclude Include="render_target_types.h" />
     <ClInclude Include="scene.h" />
     <ClInclude Include="shader_loader.h" />
     <ClInclude Include="stdinc.h" />

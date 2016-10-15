@@ -99,6 +99,12 @@
     <ClCompile Include="glcontext.cpp">
       <Filter>Source Files\engine\core\render\glrenderer</Filter>
     </ClCompile>
+    <ClCompile Include="depth_target.cpp">
+      <Filter>Source Files\engine\core\render</Filter>
+    </ClCompile>
+    <ClCompile Include="render_target.cpp">
+      <Filter>Source Files\engine\core\render</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="vector3f.h">
@@ -184,6 +190,24 @@
     </ClInclude>
     <ClInclude Include="glcontext.h">
       <Filter>Header Files\engine\core\render\glrender</Filter>
+    </ClInclude>
+    <ClInclude Include="render_target_types.h">
+      <Filter>Header Files\engine\core\render</Filter>
+    </ClInclude>
+    <ClInclude Include="render_pass.h">
+      <Filter>Header Files\engine\core\render</Filter>
+    </ClInclude>
+    <ClInclude Include="render_target.h">
+      <Filter>Header Files\engine\core\render</Filter>
+    </ClInclude>
+    <ClInclude Include="render_output_registry.h">
+      <Filter>Header Files\engine\core\render</Filter>
+    </ClInclude>
+    <ClInclude Include="depth_target.h">
+      <Filter>Header Files\engine\core\render</Filter>
+    </ClInclude>
+    <ClInclude Include="render_target_manager.h">
+      <Filter>Header Files\engine\core\render</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
