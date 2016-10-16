@@ -131,16 +131,16 @@
 
 #define KEY_LAST               KEY_MENU
 
-#define MOD_SHIFT           0x0001
+#define KEY_MOD_SHIFT           0x0001
 /*! @brief If this bit is set one or more Control keys were held down.
 */
 #define MOD_CONTROL         0x0002
 /*! @brief If this bit is set one or more Alt keys were held down.
 */
-#define MOD_ALT             0x0004
+#define KEY_MOD_ALT             0x0004
 /*! @brief If this bit is set one or more Super keys were held down.
 */
-#define MOD_SUPER           0x0008
+#define KEY_MOD_SUPER           0x0008
 
 /*! @} */
 

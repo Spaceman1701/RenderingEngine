@@ -14,6 +14,10 @@ DepthTarget::DepthTarget(DepthTarget& dt) {
 	this->id = id;
 }
 
+DepthTarget::DepthTarget() {
+	this->type == NONE;
+}
+
 DepthTargetType DepthTarget::getType() {
 	return type;
 }

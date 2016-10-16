@@ -9,9 +9,9 @@ RenderTarget::RenderTarget(int width, int height, TargetType t, std::string id) 
 	this->height = height;
 }
 
-RenderTarget::RenderTarget(RenderTarget& r) {
-	this->type = r.type;
-	this->id = r.id;
+RenderTarget::RenderTarget(RenderTarget* r) {
+	this->type = r->type;
+	this->id = r->id;
 }
 
 TargetType RenderTarget::getTargetType() {

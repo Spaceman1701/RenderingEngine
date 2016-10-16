@@ -12,7 +12,7 @@ namespace engine {
 				int height;
 			public:
 				RenderTarget(int width, int height, TargetType t, std::string id);
-				RenderTarget(RenderTarget& r);
+				RenderTarget(RenderTarget* r);
 				
 				TargetType getTargetType();
 				std::string getId();

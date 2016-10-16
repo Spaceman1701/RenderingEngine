@@ -108,6 +108,12 @@
     <ClCompile Include="gltarget_selector.cpp">
       <Filter>Source Files\engine\core\render\glrenderer</Filter>
     </ClCompile>
+    <ClCompile Include="framebuffer_prototype.cpp">
+      <Filter>Source Files\engine\core\render</Filter>
+    </ClCompile>
+    <ClCompile Include="glframebuffer.cpp">
+      <Filter>Header Files\engine\core\render\glrender</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="vector3f.h">
@@ -209,10 +215,16 @@
     <ClInclude Include="depth_target.h">
       <Filter>Header Files\engine\core\render</Filter>
     </ClInclude>
-    <ClInclude Include="render_target_manager.h">
+    <ClInclude Include="gltarget_selector.h">
+      <Filter>Header Files\engine\core\render\glrender</Filter>
+    </ClInclude>
+    <ClInclude Include="framebuffer_prototype.h">
       <Filter>Header Files\engine\core\render</Filter>
     </ClInclude>
-    <ClInclude Include="gltarget_selector.h">
+    <ClInclude Include="object_metadata.h">
+      <Filter>Header Files\engine\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="glframebuffermanager.h">
       <Filter>Header Files\engine\core\render\glrender</Filter>
     </ClInclude>
   </ItemGroup>

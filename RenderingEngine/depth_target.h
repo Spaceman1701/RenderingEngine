@@ -15,6 +15,7 @@ namespace engine {
 			public:
 				DepthTarget(int width, int height, DepthTargetType type, std::string id);
 				DepthTarget(DepthTarget& dt);
+				DepthTarget(); //empty target
 
 				DepthTargetType getType();
 				std::string getId();

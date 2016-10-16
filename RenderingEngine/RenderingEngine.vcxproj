@@ -38,7 +38,9 @@
     <ClCompile Include="depth_target.cpp" />
     <ClCompile Include="engine.cpp" />
     <ClCompile Include="engine_config.cpp" />
+    <ClCompile Include="framebuffer_prototype.cpp" />
     <ClCompile Include="glcontext.cpp" />
+    <ClCompile Include="glframebuffer.cpp" />
     <ClCompile Include="glrenderer.cpp" />
     <ClCompile Include="gltarget_selector.cpp" />
     <ClCompile Include="main.cpp" />
@@ -57,7 +59,9 @@
     <ClInclude Include="depth_target.h" />
     <ClInclude Include="engine.h" />
     <ClInclude Include="engine_config.h" />
+    <ClInclude Include="framebuffer_prototype.h" />
     <ClInclude Include="glcontext.h" />
+    <ClInclude Include="glframebuffermanager.h" />
     <ClInclude Include="glmesh.h" />
     <ClInclude Include="glprogram.h" />
     <ClInclude Include="glrenderer.h" />
@@ -70,6 +74,7 @@
     <ClInclude Include="mesh.h" />
     <ClInclude Include="mesh_pool.h" />
     <ClInclude Include="model_loader.h" />
+    <ClInclude Include="object_metadata.h" />
     <ClInclude Include="program.h" />
     <ClInclude Include="program_pool.h" />
     <ClInclude Include="quaternion.h" />
@@ -77,7 +82,6 @@
     <ClInclude Include="render_output_registry.h" />
     <ClInclude Include="render_pass.h" />
     <ClInclude Include="render_target.h" />
-    <ClInclude Include="render_target_manager.h" />
     <ClInclude Include="render_target_types.h" />
     <ClInclude Include="scene.h" />
     <ClInclude Include="shader_loader.h" />

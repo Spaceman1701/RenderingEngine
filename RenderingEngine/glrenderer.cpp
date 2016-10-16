@@ -4,9 +4,8 @@
 using namespace engine::core::render::gl;
 using namespace engine::core;
 
-
 void GLRenderer::init(EngineConfig& config, GLFWwindow* window) {
-
+	inited = true;
 	if (config.getVsync()) {
 		glfwSwapInterval(config.getNumVBlank());
 	}
@@ -19,4 +18,10 @@ void GLRenderer::draw(CommandList& renderCommands) {
 GLRenderer::~GLRenderer() {
 	glfwDestroyWindow(window);
 	glfwTerminate();
+}
+
+void GLRenderer::addRenderPass(AbstractRenderPass* pass) {
+	if (!inited) {
+		renderPasses.push_back(pass);
+	}
 }
