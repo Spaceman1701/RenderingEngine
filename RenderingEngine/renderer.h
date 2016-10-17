@@ -13,6 +13,7 @@ namespace engine {
 				virtual void addRenderPass(AbstractRenderPass* pass) = 0;
 				virtual void draw(CommandList& commands) = 0;
 				virtual ~IRenderer() {};
+				virtual void renderGeometry() = 0;
 			};
 		}
 	}

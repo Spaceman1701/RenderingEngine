@@ -58,6 +58,12 @@
     <Filter Include="Source Files\engine\core\render\glrenderer">
       <UniqueIdentifier>{4523e53e-c907-4e4a-a3db-752cfae5c406}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\engine\graphics">
+      <UniqueIdentifier>{b5fa5a0c-3454-4c1f-a656-3e75f8a51a14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine\graphics\glgraphics">
+      <UniqueIdentifier>{ebe53296-81fb-4e87-9e72-515383172222}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -110,6 +116,12 @@
     </ClCompile>
     <ClCompile Include="framebuffer_prototype.cpp">
       <Filter>Source Files\engine\core\render</Filter>
+    </ClCompile>
+    <ClCompile Include="glframebuffer_manager.cpp">
+      <Filter>Source Files\engine\core\render\glrenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="glprogram.cpp">
+      <Filter>Source Files\engine\graphics\glgraphics</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -221,7 +233,7 @@
     <ClInclude Include="object_metadata.h">
       <Filter>Header Files\engine\graphics</Filter>
     </ClInclude>
-    <ClInclude Include="glframebuffermanager.h">
+    <ClInclude Include="glframebuffer_manager.h">
       <Filter>Header Files\engine\core\render\glrender</Filter>
     </ClInclude>
   </ItemGroup>

@@ -14,17 +14,17 @@ RenderTarget::RenderTarget(RenderTarget* r) {
 	this->id = r->id;
 }
 
-TargetType RenderTarget::getTargetType() {
+TargetType RenderTarget::getTargetType() const{
 	return type;
 }
-std::string RenderTarget::getId() {
+std::string RenderTarget::getId() const{
 	return id;
 }
 
-int RenderTarget::getWidth() {
+int RenderTarget::getWidth() const {
 	return width;
 }
 
-int RenderTarget::getHeight() {
+int RenderTarget::getHeight() const {
 	return height;
 }

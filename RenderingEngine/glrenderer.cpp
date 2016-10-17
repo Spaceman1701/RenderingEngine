@@ -11,12 +11,22 @@ void GLRenderer::init(EngineConfig& config, GLFWwindow* window) {
 		glfwSwapInterval(config.getNumVBlank());
 	}
 	for (AbstractRenderPass* pass: renderPasses) {
-		fbm.createFrameBuffer(pass, pass->registerOutputFrameBuffer());
+		fbm.createFrameBuffer(pass, pass->registerOutputFrameBuffer(), renderTargetSelector);
 	}
 }
 
 void GLRenderer::draw(CommandList& renderCommands) {
+	currentGeometry = &renderCommands;
+	for (AbstractRenderPass* pass : renderPasses) {
+		//glBindFramebuffer(GL_FRAMEBUFFER, fbm.getFrameBuffer(pass));
+		pass->doPass(this);
+	}
 	glfwSwapBuffers(window);
+
+}
+
+int GLRenderer::getRenderTexture(std::string& id) {
+	return fbm.getFBTexture(id);
 }
 
 GLRenderer::~GLRenderer() {
@@ -27,5 +37,11 @@ GLRenderer::~GLRenderer() {
 void GLRenderer::addRenderPass(AbstractRenderPass* pass) {
 	if (!inited) {
 		renderPasses.push_back(pass);
+	}
+}
+
+void GLRenderer::renderGeometry() {
+	for (RenderingCommand rc : *currentGeometry) {
+
 	}
 }

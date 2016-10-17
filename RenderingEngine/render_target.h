@@ -14,11 +14,11 @@ namespace engine {
 				RenderTarget(int width, int height, TargetType t, std::string id);
 				RenderTarget(RenderTarget* r);
 				
-				TargetType getTargetType();
-				std::string getId();
+				TargetType getTargetType() const;
+				std::string getId() const;
 
-				int getWidth();
-				int getHeight();
+				int getWidth() const;
+				int getHeight() const;
 			};
 		}
 	}
