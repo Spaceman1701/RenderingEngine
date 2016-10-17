@@ -14,6 +14,7 @@ namespace engine {
 				DepthTarget depthTarget;
 			public:
 				FrameBufferPrototype(int width, int height);
+				FrameBufferPrototype(FrameBufferPrototype& fbm);
 				bool addColorBuff(RenderTarget rt);
 				bool setDepthTarget(DepthTarget dt);
 

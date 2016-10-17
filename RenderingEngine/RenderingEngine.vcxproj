@@ -40,7 +40,6 @@
     <ClCompile Include="engine_config.cpp" />
     <ClCompile Include="framebuffer_prototype.cpp" />
     <ClCompile Include="glcontext.cpp" />
-    <ClCompile Include="glframebuffer.cpp" />
     <ClCompile Include="glrenderer.cpp" />
     <ClCompile Include="gltarget_selector.cpp" />
     <ClCompile Include="main.cpp" />

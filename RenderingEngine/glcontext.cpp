@@ -17,10 +17,11 @@ bool GLContext::init(EngineConfig& config) {
 	
 
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 5);
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	vidMode = glfwGetVideoMode(glfwGetPrimaryMonitor());
 	if (config.getFullscreen()) {
-		window = glfwCreateWindow(config.getResolutionWidth(), config.getResolutionHeight(), "GLRENDERER", glfwGetMonitors(&num_monitors)[0], NULL);
+		window = glfwCreateWindow(config.getResolutionWidth(), config.getResolutionHeight(), "GLRENDERER",
+			glfwGetMonitors(&num_monitors)[0], NULL);
 	}
 	else {
 		window = glfwCreateWindow(config.getResolutionWidth(), config.getResolutionHeight(), "test", NULL, NULL);

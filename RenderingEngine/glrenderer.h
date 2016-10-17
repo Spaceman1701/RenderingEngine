@@ -3,7 +3,8 @@
 #include <glew.h>
 #include <glfw3.h>
 #include "gltarget_selector.h"
-#include "render_pass.h";
+#include "render_pass.h"
+#include "glframebuffermanager.h"
 #include <vector>
 namespace engine {
 	namespace core {
@@ -15,6 +16,7 @@ namespace engine {
 					GLFWwindow* window;
 					GLTargetSelector selector;
 					RenderPassList renderPasses;
+					GLFrameBufferManager fbm;
 					bool inited = false;
 				public:
 					void addRenderPass(AbstractRenderPass* pass);

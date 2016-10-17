@@ -6,6 +6,12 @@ FrameBufferPrototype::FrameBufferPrototype(int width, int height) {
 	this->width = width;
 	this->height = height;
 }
+FrameBufferPrototype::FrameBufferPrototype(FrameBufferPrototype& fbm) {
+	this->width = fbm.width;
+	this->height = fbm.height;
+	this->depthTarget = fbm.depthTarget;
+	this->colorBuffers = fbm.colorBuffers;
+}
 bool FrameBufferPrototype::addColorBuff(RenderTarget rt) {
 	if (rt.getHeight() != height || rt.getWidth() != width) {
 		return false;

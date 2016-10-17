@@ -24,7 +24,6 @@ namespace RenderingEngineTest
 			Vector3f vec2(2.0f, 1.0f, 3.7f);
 			Vector3f add = vec + vec2;
 			Vector3f addExpected(1.0f + 2.0f, -0.7f + 1.0f, 16.3f + 3.7f); //to avoid floating point errors... 
-																		//idk if this will work on every machine
 			Vector3f sub = vec - vec2;
 			Vector3f subExpected(1.0f - 2.0f, -0.7f - 1.0f, 16.3f - 3.7f);
 			Assert::AreEqual(addExpected, add, L"add failed", LINE_INFO());

@@ -111,9 +111,6 @@
     <ClCompile Include="framebuffer_prototype.cpp">
       <Filter>Source Files\engine\core\render</Filter>
     </ClCompile>
-    <ClCompile Include="glframebuffer.cpp">
-      <Filter>Header Files\engine\core\render\glrender</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="vector3f.h">

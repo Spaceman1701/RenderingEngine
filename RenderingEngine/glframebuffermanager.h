@@ -9,7 +9,7 @@ namespace engine {
 					typedef std::unordered_map<AbstractRenderPass*, int> bufferMap;
 				public:
 					void createFrameBuffer(AbstractRenderPass* pass, FrameBufferPrototype& fbp);
-					void bindFrameBuffer();
+					int getFrameBuffer(AbstractRenderPass* pass);
 				};
 			}
 		}

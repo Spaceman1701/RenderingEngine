@@ -6,11 +6,12 @@
 namespace engine {
 	namespace core {
 		namespace render {
+			class IRenderer;
 			class AbstractRenderPass {
 			protected:
 				std::string name;
 			public:
-				virtual void registerOutputs(FrameBufferPrototype& fbo) = 0;
+				virtual FrameBufferPrototype registerOutputFrameBuffer() = 0;
 				virtual void doPass(IRenderer* renderer) = 0;
 				virtual ~AbstractRenderPass() {}
 			};
