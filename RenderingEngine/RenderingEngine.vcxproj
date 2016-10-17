@@ -35,6 +35,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="cubedrawpass.cpp" />
     <ClCompile Include="depth_target.cpp" />
     <ClCompile Include="engine.cpp" />
     <ClCompile Include="engine_config.cpp" />
@@ -57,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="context.h" />
+    <ClInclude Include="cubedrawpass.h" />
     <ClInclude Include="depth_target.h" />
     <ClInclude Include="engine.h" />
     <ClInclude Include="engine_config.h" />

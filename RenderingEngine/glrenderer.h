@@ -7,6 +7,7 @@
 #include "glframebuffer_manager.h"
 #include <vector>
 #include <string>
+#include "cubedrawpass.h"
 namespace engine {
 	namespace core {
 		namespace render {
@@ -20,6 +21,7 @@ namespace engine {
 					GLFrameBufferManager fbm;
 					GLTargetSelector renderTargetSelector;
 					CommandList* currentGeometry;
+					CubeDrawPass* cubeDrawPass;
 					bool inited = false;
 				public:
 					void addRenderPass(IRenderPass* pass);

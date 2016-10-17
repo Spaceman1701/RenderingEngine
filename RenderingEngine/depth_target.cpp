@@ -15,7 +15,7 @@ DepthTarget::DepthTarget(DepthTarget& dt) {
 }
 
 DepthTarget::DepthTarget() {
-	this->type == NONE;
+	this->type = NONE;
 }
 
 DepthTargetType DepthTarget::getType() {

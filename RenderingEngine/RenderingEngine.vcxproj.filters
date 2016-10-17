@@ -123,6 +123,9 @@
     <ClCompile Include="glprogram.cpp">
       <Filter>Source Files\engine\graphics\glgraphics</Filter>
     </ClCompile>
+    <ClCompile Include="cubedrawpass.cpp">
+      <Filter>Source Files\engine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="vector3f.h">
@@ -235,6 +238,9 @@
     </ClInclude>
     <ClInclude Include="glframebuffer_manager.h">
       <Filter>Header Files\engine\core\render\glrender</Filter>
+    </ClInclude>
+    <ClInclude Include="cubedrawpass.h">
+      <Filter>Header Files\engine</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
