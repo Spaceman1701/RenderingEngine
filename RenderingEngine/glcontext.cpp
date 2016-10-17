@@ -50,7 +50,7 @@ int GLContext::getKey(int key) {
 }
 
 void GLContext::draw(CommandList& renderingCommands) {
-
+	renderer->draw(renderingCommands);
 }
 
 GLContext::~GLContext() {

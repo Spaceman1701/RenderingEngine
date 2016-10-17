@@ -6,11 +6,11 @@
 namespace engine {
 	namespace core {
 		namespace render {
-			class AbstractRenderPass;
+			class IRenderPass;
 
 			class IRenderer {
 			public:
-				virtual void addRenderPass(AbstractRenderPass* pass) = 0;
+				virtual void addRenderPass(IRenderPass* pass) = 0;
 				virtual void draw(CommandList& commands) = 0;
 				virtual ~IRenderer() {};
 				virtual void renderGeometry() = 0;

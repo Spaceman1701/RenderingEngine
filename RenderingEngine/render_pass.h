@@ -7,13 +7,13 @@ namespace engine {
 	namespace core {
 		namespace render {
 			class IRenderer;
-			class AbstractRenderPass {
+			class IRenderPass {
 			protected:
 				std::string name;
 			public:
 				virtual FrameBufferPrototype registerOutputFrameBuffer() = 0;
 				virtual void doPass(IRenderer* renderer) = 0;
-				virtual ~AbstractRenderPass() {}
+				virtual ~IRenderPass() {}
 			};
 		}
 	}

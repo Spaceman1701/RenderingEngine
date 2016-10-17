@@ -12,7 +12,7 @@ namespace engine {
 		namespace render {
 			namespace gl {
 				class GLRenderer : public IRenderer {
-					typedef std::vector<AbstractRenderPass*> RenderPassList;
+					typedef std::vector<IRenderPass*> RenderPassList;
 				private:
 					GLFWwindow* window;
 					GLTargetSelector selector;
@@ -22,7 +22,7 @@ namespace engine {
 					CommandList* currentGeometry;
 					bool inited = false;
 				public:
-					void addRenderPass(AbstractRenderPass* pass);
+					void addRenderPass(IRenderPass* pass);
 					void init(EngineConfig& config, GLFWwindow* window);
 					void draw(CommandList& renderCommands);
 					int getRenderTexture(std::string& id);

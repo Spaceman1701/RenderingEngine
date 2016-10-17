@@ -15,7 +15,7 @@ int GLFrameBufferManager::getAttachment(int value) {
 	}
 	return 0x8CE0 + value;
 }
-void GLFrameBufferManager::createFrameBuffer(AbstractRenderPass* pass, FrameBufferPrototype& fbp, GLTargetSelector& targetSelector) { //GPU MEMORY LEAK HERE.. lol
+void GLFrameBufferManager::createFrameBuffer(IRenderPass* pass, FrameBufferPrototype& fbp, GLTargetSelector& targetSelector) { //GPU MEMORY LEAK HERE.. lol
 	std::vector<int> textures;
 	std::vector<RenderTarget> renderTargetList = fbp.getBufferList();
 	GLuint currentTex;
@@ -68,7 +68,7 @@ void GLFrameBufferManager::createFrameBuffer(AbstractRenderPass* pass, FrameBuff
 	bufferMap[pass] = buffer;
 }
 
-int GLFrameBufferManager::getFrameBuffer(AbstractRenderPass* pass) {
+int GLFrameBufferManager::getFrameBuffer(IRenderPass* pass) {
 	return bufferMap[pass];
 }
 int GLFrameBufferManager::getFBTexture(std::string& id) {

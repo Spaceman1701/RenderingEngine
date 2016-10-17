@@ -10,14 +10,14 @@ void GLRenderer::init(EngineConfig& config, GLFWwindow* window) {
 	if (config.getVsync()) {
 		glfwSwapInterval(config.getNumVBlank());
 	}
-	for (AbstractRenderPass* pass: renderPasses) {
+	for (IRenderPass* pass: renderPasses) {
 		fbm.createFrameBuffer(pass, pass->registerOutputFrameBuffer(), renderTargetSelector);
 	}
 }
 
 void GLRenderer::draw(CommandList& renderCommands) {
 	currentGeometry = &renderCommands;
-	for (AbstractRenderPass* pass : renderPasses) {
+	for (IRenderPass* pass : renderPasses) {
 		//glBindFramebuffer(GL_FRAMEBUFFER, fbm.getFrameBuffer(pass));
 		pass->doPass(this);
 	}
@@ -34,7 +34,7 @@ GLRenderer::~GLRenderer() {
 	glfwTerminate();
 }
 
-void GLRenderer::addRenderPass(AbstractRenderPass* pass) {
+void GLRenderer::addRenderPass(IRenderPass* pass) {
 	if (!inited) {
 		renderPasses.push_back(pass);
 	}
