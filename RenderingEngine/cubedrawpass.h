@@ -10,6 +10,7 @@ private:
 	GLuint vbo;
 	GLuint shaderProgram;
 	Matrix4f pMat;
+	float t;
 
 	void createShaderProgram();
 public:

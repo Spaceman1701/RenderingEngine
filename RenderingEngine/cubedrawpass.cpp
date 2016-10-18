@@ -11,6 +11,7 @@ void CubeDrawPass::createShaderProgram()
 		"#version 330 core \n"
 		"layout(location = 0) in vec3 vert;"
 		"uniform mat4 pMat;"
+		"uniform mat4 rMat;"
 		"void main() {"
 		"vec3 vertMov = vec3(vert.x, vert.y, vert.z - 7.0);"
 		"gl_Position = pMat*vec4(vertMov, 1.0);"
@@ -67,7 +68,7 @@ void CubeDrawPass::createShaderProgram()
 }
 
 CubeDrawPass::CubeDrawPass() {
-	pMat = createProjectionMatrix(0.01f, 10.0f, 45.0f, 4.0f / 3.0f);
+	pMat = createProjectionMatrix(0.1f, 10.0f, 45.0f, 4.0f / 3.0f);
 }
 
 FrameBufferPrototype CubeDrawPass::registerOutputFrameBuffer() {
@@ -116,22 +117,31 @@ FrameBufferPrototype CubeDrawPass::registerOutputFrameBuffer() {
 	glGenBuffers(1, &vertexbuffer);
 	glBindBuffer(GL_ARRAY_BUFFER, vertexbuffer);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(g_vertex_buffer_data), g_vertex_buffer_data, GL_STATIC_DRAW);
-	glDisable(GL_CULL_FACE);
+	//glDisable(GL_CULL_FACE);
+	//glEnable(GL_DEPTH_TEST);
+	//glDepthFunc(GL_LESS);
 	createShaderProgram();
 
 	return FrameBufferPrototype(0, 0);
 }
 void CubeDrawPass::doPass(IRenderer* renderer) {
+	Matrix4f rMat;
+	rMat.setToRotation(Vector3f(0, 1, 0), t);
 	glUseProgram(shaderProgram);
 	GLfloat pmat[16];
 	pMat.rawMatrix(pmat);
+	GLfloat rmat[16];
+	rMat.rawMatrix(rmat);
 	glUniformMatrix4fv(glGetUniformLocation(shaderProgram, "pMat"), 1, GL_FALSE, pmat);
+	glUniformMatrix4fv(glGetUniformLocation(shaderProgram, "rMat"), 1, GL_FALSE, rmat);
 	glEnableVertexAttribArray(0);
 	glBindBuffer(GL_ARRAY_BUFFER, vbo);
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (void*)0);
-	glDrawArrays(GL_TRIANGLES, 0, 3);
+	glVertexAttribPointer(0, 9, GL_FLOAT, GL_FALSE, 0, (void*)0);
+	glDrawArrays(GL_TRIANGLES, 0, 9);
 	glDisableVertexAttribArray(0);
 	glUseProgram(0);
+	//t += 0.01f;
+	//t /= 3.14f;
 }
 CubeDrawPass::~CubeDrawPass() {
 	glDeleteVertexArrays(1, &vbo);
